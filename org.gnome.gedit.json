@@ -1,7 +1,7 @@
 {
     "app-id": "org.gnome.gedit",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "3.24",
+    "runtime-version": "3.28",
     "branch": "stable",
     "sdk": "org.gnome.Sdk",
     "command": "gedit",
@@ -68,8 +68,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gedit/3.22/gedit-3.22.1.tar.xz",
-                    "sha256": "aa7bc3618fffa92fdb7daf2f57152e1eb7962e68561a9c92813d7bbb7fc9492b"
+                    "url": "https://download.gnome.org/sources/gedit/3.28/gedit-3.28.0.tar.xz",
+                    "sha256": "9bf90a2d4fd7be802ad98d226d254ad42057b7c5cc03d1cd39b813123fa8ca5f"
                 }
             ]
         }
