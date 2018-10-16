@@ -1,7 +1,7 @@
 {
     "app-id": "org.gnome.gedit",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "3.28",
+    "runtime-version": "3.30",
     "branch": "stable",
     "sdk": "org.gnome.Sdk",
     "command": "gedit",
