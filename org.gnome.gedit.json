@@ -84,6 +84,16 @@
                     "sha256": "eaf3b17856a0fb7c6f363c2ebbf4f26c5be6eb6552a49e58c44aee0fcb789163"
                 }
             ]
+        },
+        {
+            "name" : "gedit-plugins",
+            "sources" : [
+                {
+                    "type" : "archive",
+                    "url" : "https://download.gnome.org/sources/gedit-plugins/3.30/gedit-plugins-3.30.1.tar.xz",
+                    "sha256": "a3c0f823276a2826f9c56df0dc61daac046ea7cba3aa8760a0be84b2fe645471"
+                }
+            ]
         }
     ]
 }
