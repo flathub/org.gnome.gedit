@@ -5,7 +5,7 @@
     "branch": "stable",
     "sdk": "org.gnome.Sdk",
     "command": "gedit",
-    "rename-icon": "gedit",
+    "rename-icon": "org.gnome.gedit",
     "finish-args": [
         "--share=ipc", "--socket=x11",
         "--socket=wayland",
