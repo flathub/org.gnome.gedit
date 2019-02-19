@@ -1,7 +1,7 @@
 {
     "app-id": "org.gnome.gedit",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "3.30",
+    "runtime-version": "3.31.90",
     "branch": "stable",
     "sdk": "org.gnome.Sdk",
     "command": "gedit",
@@ -42,8 +42,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gtksourceview/3.24/gtksourceview-3.24.9.tar.xz",
-                    "sha256": "699d76a453e6a3d3331906346e3dbfa25f2cbc9ec090e46635e9c6bb595e07c2"
+                    "url": "https://download.gnome.org/sources/gtksourceview/4.0/gtksourceview-4.0.3.tar.xz",
+                    "sha256": "3d55a7b82841d96bf414ced2e1e912d4881c9ba2f7b74f0ff8aad636087f9d73"
                 }
             ]
         },
@@ -80,8 +80,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gedit/3.30/gedit-3.30.2.tar.xz",
-                    "sha256": "eaf3b17856a0fb7c6f363c2ebbf4f26c5be6eb6552a49e58c44aee0fcb789163"
+                    "url": "https://download.gnome.org/sources/gedit/3.31/gedit-3.31.90.tar.xz",
+                    "sha256": "92d540f5c59106eca3ec9648a6bb2aa2ac72247ef4e50fd43a037abba5494f78"
                 }
             ]
         },
@@ -90,8 +90,8 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://download.gnome.org/sources/gedit-plugins/3.30/gedit-plugins-3.30.1.tar.xz",
-                    "sha256": "a3c0f823276a2826f9c56df0dc61daac046ea7cba3aa8760a0be84b2fe645471"
+                    "url" : "https://download.gnome.org/sources/gedit-plugins/3.31/gedit-plugins-3.31.90.tar.xz",
+                    "sha256": "54403c7688dbc3935333771c95e24e4d6651116a04e2481829c1d70f70290298"
                 }
             ]
         }
