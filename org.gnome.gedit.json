@@ -1,13 +1,14 @@
 {
     "app-id": "org.gnome.gedit",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "3.30",
+    "runtime-version": "3.32",
     "branch": "beta",
     "sdk": "org.gnome.Sdk",
     "command": "gedit",
     "rename-icon": "org.gnome.gedit",
     "finish-args": [
-        "--share=ipc", "--socket=x11",
+        "--share=ipc",
+        "--socket=x11",
         "--socket=wayland",
         "--filesystem=host",
         "--filesystem=xdg-run/dconf", "--filesystem=~/.config/dconf:ro",
@@ -42,8 +43,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gtksourceview/4.0/gtksourceview-4.0.3.tar.xz",
-                    "sha256": "3d55a7b82841d96bf414ced2e1e912d4881c9ba2f7b74f0ff8aad636087f9d73"
+                    "url": "https://download.gnome.org/sources/gtksourceview/4.2/gtksourceview-4.2.0.tar.xz",
+                    "sha256": "c431eb234dc83c7819e58f77dd2af973252c7750da1c9d125ddc94268f94f675"
                 }
             ]
         },
@@ -58,21 +59,6 @@
                     "url" : "https://download.gnome.org/sources/gspell/1.8/gspell-1.8.1.tar.xz",
                     "sha256" : "819a1d23c7603000e73f5e738bdd284342e0cd345fb0c7650999c31ec741bbe5"
                 }
-            ],
-            "modules": [
-                {
-                    "name": "enchant2",
-                    "cleanup": [
-                      "/bin"
-                    ],
-                    "sources": [
-                        {
-                            "type": "archive",
-                            "url": "https://github.com/AbiWord/enchant/releases/download/v2.2.3/enchant-2.2.3.tar.gz",
-                            "sha256": "abd8e915675cff54c0d4da5029d95c528362266557c61c7149d53fa069b8076d"
-                        }
-                    ]
-                }
             ]
         },
         {
@@ -81,8 +67,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gedit/3.31/gedit-3.31.90.tar.xz",
-                    "sha256": "92d540f5c59106eca3ec9648a6bb2aa2ac72247ef4e50fd43a037abba5494f78"
+                    "url": "https://download.gnome.org/sources/gedit/3.32/gedit-3.32.0.tar.xz",
+                    "sha256": "c9e2e2a865c962ef172892a5d3459dc834871761ae6456b68436b3b577f22ad3"
                 }
             ]
         },
@@ -91,8 +77,8 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://download.gnome.org/sources/gedit-plugins/3.31/gedit-plugins-3.31.90.tar.xz",
-                    "sha256": "54403c7688dbc3935333771c95e24e4d6651116a04e2481829c1d70f70290298"
+                    "url" : "https://download.gnome.org/sources/gedit-plugins/3.32/gedit-plugins-3.32.0.tar.xz",
+                    "sha256": "7d43786f89f185600bb960a5cb8dda799a5ba97cc3df405c15251eb24430940b"
                 }
             ]
         }
