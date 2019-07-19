@@ -43,8 +43,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gtksourceview/4.2/gtksourceview-4.2.0.tar.xz",
-                    "sha256": "c431eb234dc83c7819e58f77dd2af973252c7750da1c9d125ddc94268f94f675"
+                    "url": "https://download.gnome.org/sources/gtksourceview/4.3/gtksourceview-4.3.1.tar.xz",
+                    "sha256": "b8ef118786f4e5c1ee20b986ac3914c60064a11acdee73645be3adb3543a2a5d"
                 }
             ]
         },
@@ -67,8 +67,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gedit/3.32/gedit-3.32.0.tar.xz",
-                    "sha256": "c9e2e2a865c962ef172892a5d3459dc834871761ae6456b68436b3b577f22ad3"
+                    "url": "https://download.gnome.org/sources/gedit/3.32/gedit-3.32.2.tar.xz",
+                    "sha256": "742fef5e496f5d0dbc95dac5c5547f040dffbea55cd835e6618294eadd9959e0"
                 }
             ]
         },
@@ -77,8 +77,8 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://download.gnome.org/sources/gedit-plugins/3.32/gedit-plugins-3.32.0.tar.xz",
-                    "sha256": "7d43786f89f185600bb960a5cb8dda799a5ba97cc3df405c15251eb24430940b"
+                    "url" : "https://download.gnome.org/sources/gedit-plugins/3.32/gedit-plugins-3.32.2.tar.xz",
+                    "sha256": "1368338882c535297ab4f6677da40c3f7bea545464c04a9076ee2c0c38eabeff"
                 }
             ]
         }
