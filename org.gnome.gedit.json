@@ -10,7 +10,8 @@
         "--socket=x11",
         "--socket=wayland",
         "--filesystem=host",
-        "--talk-name=org.gtk.vfs.*"
+        "--talk-name=org.gtk.vfs.*",
+        "--metadata=X-DConf=migrate-path=/org/gnome/gedit/"
     ],
     "cleanup": ["/include", "/lib/pkgconfig",
                 "/share/pkgconfig", "/share/aclocal",
