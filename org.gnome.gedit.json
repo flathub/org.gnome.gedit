@@ -1,8 +1,7 @@
 {
     "app-id": "org.gnome.gedit",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "3.32",
-    "branch": "stable",
+    "runtime-version": "3.34",
     "sdk": "org.gnome.Sdk",
     "command": "gedit",
     "rename-icon": "org.gnome.gedit",
@@ -11,15 +10,8 @@
         "--socket=x11",
         "--socket=wayland",
         "--filesystem=host",
-        "--filesystem=xdg-run/dconf", "--filesystem=~/.config/dconf:ro",
-        "--talk-name=ca.desrt.dconf", "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
         "--talk-name=org.gtk.vfs.*"
     ],
-    "build-options" : {
-        "env": {
-            "V": "1"
-        }
-    },
     "cleanup": ["/include", "/lib/pkgconfig",
                 "/share/pkgconfig", "/share/aclocal",
                 "/man", "/share/man", "/share/gtk-doc",
@@ -28,23 +20,28 @@
     "modules": [
         {
             "name": "libpeas",
+            "buildsystem": "meson",
+            "config-opts": [
+                "-Dglade_catalog=false",
+                "-Ddemos=false"
+            ],
             "cleanup": [ "/bin/*", "/lib/peas-demo" ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/libpeas/1.22/libpeas-1.22.0.tar.xz",
-                    "sha256": "5b2fc0f53962b25bca131a5ec0139e6fef8e254481b6e777975f7a1d2702a962"
+                    "url": "https://download.gnome.org/sources/libpeas/1.24/libpeas-1.24.0.tar.xz",
+                    "sha256": "0b9a00138c129a663de3eef5569b00ace03ce31d345f7af783768e9f35c8e6f9"
                 }
             ]
         },
         {
             "name": "gtksourceview",
-            "config-opts": ["--disable-Werror" ],
+            "buildsystem": "meson",
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gtksourceview/4.3/gtksourceview-4.3.1.tar.xz",
-                    "sha256": "b8ef118786f4e5c1ee20b986ac3914c60064a11acdee73645be3adb3543a2a5d"
+                    "url": "https://download.gnome.org/sources/gtksourceview/4.4/gtksourceview-4.4.0.tar.xz",
+                    "sha256": "9ddb914aef70a29a66acd93b4f762d5681202e44094d2d6370e51c9e389e689a"
                 }
             ]
         },
@@ -56,8 +53,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url" : "https://download.gnome.org/sources/gspell/1.8/gspell-1.8.1.tar.xz",
-                    "sha256" : "819a1d23c7603000e73f5e738bdd284342e0cd345fb0c7650999c31ec741bbe5"
+                    "url" : "https://download.gnome.org/sources/gspell/1.8/gspell-1.8.2.tar.xz",
+                    "sha256" : "bb9195c3a95bacf556d0203e9691f7489e0d3bc5ae1e5a440c89b2f2435d3ed6"
                 }
             ]
         },
@@ -67,18 +64,22 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gedit/3.32/gedit-3.32.2.tar.xz",
-                    "sha256": "742fef5e496f5d0dbc95dac5c5547f040dffbea55cd835e6618294eadd9959e0"
+                    "url": "https://download.gnome.org/sources/gedit/3.34/gedit-3.34.0.tar.xz",
+                    "sha256": "3e95e51d3ccb495a9ac95aa3ed7fe8fe37ccde7c678f37fa3cea684bc71d507e"
                 }
             ]
         },
         {
             "name" : "gedit-plugins",
+            "buildsystem": "meson",
+            "config-opts": [
+                "-Dplugin_zeitgeist=false"
+            ],
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://download.gnome.org/sources/gedit-plugins/3.32/gedit-plugins-3.32.2.tar.xz",
-                    "sha256": "1368338882c535297ab4f6677da40c3f7bea545464c04a9076ee2c0c38eabeff"
+                    "url" : "https://download.gnome.org/sources/gedit-plugins/3.34/gedit-plugins-3.34.0.tar.xz",
+                    "sha256": "c37fec89debcab15ed765f4d24d75e993691886ae942400c828098e7b8f2d1c9"
                 }
             ]
         }
