@@ -30,8 +30,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/libpeas/1.24/libpeas-1.24.0.tar.xz",
-                    "sha256": "0b9a00138c129a663de3eef5569b00ace03ce31d345f7af783768e9f35c8e6f9"
+                    "url": "https://download.gnome.org/sources/libpeas/1.24/libpeas-1.24.1.tar.xz",
+                    "sha256": "9c3acf7a567cbb4f8bf62b096e013f12c3911cc850c3fa9900cbd5aa4f6ec284"
                 }
             ]
         },
@@ -54,8 +54,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url" : "https://download.gnome.org/sources/gspell/1.8/gspell-1.8.2.tar.xz",
-                    "sha256" : "bb9195c3a95bacf556d0203e9691f7489e0d3bc5ae1e5a440c89b2f2435d3ed6"
+                    "url" : "https://download.gnome.org/sources/gspell/1.8/gspell-1.8.3.tar.xz",
+                    "sha256" : "5ae514dd0216be069176accf6d0049d6a01cfa6a50df4bc06be85f7080b62de8"
                 }
             ]
         },
@@ -65,8 +65,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gedit/3.34/gedit-3.34.0.tar.xz",
-                    "sha256": "3e95e51d3ccb495a9ac95aa3ed7fe8fe37ccde7c678f37fa3cea684bc71d507e"
+                    "url": "https://download.gnome.org/sources/gedit/3.34/gedit-3.34.1.tar.xz",
+                    "sha256": "ebf9ef4e19831699d26bb93ce029edfed65416d7c11147835fc370d73428d5c6"
                 }
             ]
         },
@@ -79,8 +79,8 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://download.gnome.org/sources/gedit-plugins/3.34/gedit-plugins-3.34.0.tar.xz",
-                    "sha256": "c37fec89debcab15ed765f4d24d75e993691886ae942400c828098e7b8f2d1c9"
+                    "url" : "https://download.gnome.org/sources/gedit-plugins/3.34/gedit-plugins-3.34.1.tar.xz",
+                    "sha256": "420b2ec8f4b316e1ab289d7444d4a4d489ba641989b1fdcf9d6b769a1d388d72"
                 }
             ]
         }
