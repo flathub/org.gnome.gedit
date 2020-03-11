@@ -1,7 +1,7 @@
 {
     "app-id": "org.gnome.gedit",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "3.34",
+    "runtime-version": "3.36",
     "sdk": "org.gnome.Sdk",
     "command": "gedit",
     "rename-icon": "org.gnome.gedit",
@@ -30,8 +30,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/libpeas/1.24/libpeas-1.24.1.tar.xz",
-                    "sha256": "9c3acf7a567cbb4f8bf62b096e013f12c3911cc850c3fa9900cbd5aa4f6ec284"
+                    "url": "https://download.gnome.org/sources/libpeas/1.26/libpeas-1.26.0.tar.xz",
+                    "sha256": "a976d77e20496479a8e955e6a38fb0e5c5de89cf64d9f44e75c2213ee14f7376"
                 }
             ]
         },
@@ -41,8 +41,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gtksourceview/4.4/gtksourceview-4.4.0.tar.xz",
-                    "sha256": "9ddb914aef70a29a66acd93b4f762d5681202e44094d2d6370e51c9e389e689a"
+                    "url": "https://download.gnome.org/sources/gtksourceview/4.6/gtksourceview-4.6.0.tar.xz",
+                    "sha256": "4c13e30ab2e602abdc56f55d35f43c1142a79b1cd77aa8839d2fc85e966d9a85"
                 }
             ]
         },
@@ -60,27 +60,49 @@
             ]
         },
         {
+            "name": "uchardet",
+            "buildsystem": "cmake-ninja",
+            "sources": [{
+                "type": "archive",
+                "url": "https://www.freedesktop.org/software/uchardet/releases/uchardet-0.0.6.tar.xz",
+                "sha256": "8351328cdfbcb2432e63938721dd781eb8c11ebc56e3a89d0f84576b96002c61"
+            }]
+        },
+        {
+            "name": "amtk",
+            "sources":[{
+                "type": "archive",
+                "url": "https://download.gnome.org/sources/amtk/5.0/amtk-5.0.2.tar.xz",
+                "sha256": "71cc891fbaaa3d0cb87eeef9a2f7e1a2acab62f738d09ea922fb4b9ea2f84f86"
+            }]
+        },
+        {
+            "name": "tepl",
+            "sources": [{
+                "type": "archive",
+                "url": "https://download.gnome.org/sources/tepl/4.4/tepl-4.4.0.tar.xz",
+                "sha256": "e6f6673a8a27e8f280725db8fbacec79b20676ae0558755239d15a9808faa256"
+            }]
+        },
+        {
             "name": "gedit",
             "buildsystem": "meson",
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gedit/3.34/gedit-3.34.1.tar.xz",
-                    "sha256": "ebf9ef4e19831699d26bb93ce029edfed65416d7c11147835fc370d73428d5c6"
+                    "url": "https://download.gnome.org/sources/gedit/3.36/gedit-3.36.0.tar.xz",
+                    "sha256": "c983dd12a4e9db7af1aaa3062e6f042811ef99a4d6382659096f2ef8fc559435"
                 }
             ]
         },
         {
             "name" : "gedit-plugins",
             "buildsystem": "meson",
-            "config-opts": [
-                "-Dplugin_zeitgeist=false"
-            ],
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://download.gnome.org/sources/gedit-plugins/3.34/gedit-plugins-3.34.1.tar.xz",
-                    "sha256": "420b2ec8f4b316e1ab289d7444d4a4d489ba641989b1fdcf9d6b769a1d388d72"
+                    "url" : "https://download.gnome.org/sources/gedit-plugins/3.36/gedit-plugins-3.36.1.tar.xz",
+                    "sha256": "036f074b99ae13501222b6c34003ed09abb2430c894a59ca1a41c8e91c4fae65"
                 }
             ]
         }
