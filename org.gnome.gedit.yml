@@ -72,12 +72,12 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/gedit/3.36/gedit-3.36.0.tar.xz
-        sha256: c983dd12a4e9db7af1aaa3062e6f042811ef99a4d6382659096f2ef8fc559435
+        url: https://download.gnome.org/sources/gedit/3.36/gedit-3.36.2.tar.xz
+        sha256: 6887554643c5b1b3862ac364d97b7b50224bff95e6758aeaa08f4a482b554197
 
   - name: gedit-plugins
     buildsystem: meson
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/gedit-plugins/3.36/gedit-plugins-3.36.1.tar.xz
-        sha256: 036f074b99ae13501222b6c34003ed09abb2430c894a59ca1a41c8e91c4fae65
+        url: https://download.gnome.org/sources/gedit-plugins/3.36/gedit-plugins-3.36.2.tar.xz
+        sha256: 1151b955393f75b5ee59b51154fda4f1928f498fe986a5584d3cd440876a6af6
