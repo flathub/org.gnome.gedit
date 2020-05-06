@@ -1,0 +1,86 @@
+---
+app-id: org.gnome.gedit
+runtime: org.gnome.Platform
+runtime-version: master
+sdk: org.gnome.Sdk
+command: gedit
+tags:
+  - nightly
+desktop-file-name-prefix: "(Nightly) "
+
+finish-args:
+  - "--share=ipc"
+  - "--socket=x11"
+  - "--socket=wayland"
+  # Needed at least for the integrated file browser plugin:
+  - "--filesystem=host"
+
+build-options:
+  cflags: "-O2 -g"
+  cxxflags: "-O2 -g"
+  env:
+    V: '1'
+
+cleanup:
+  - "/include"
+  - "/lib/pkgconfig"
+  - "/share/pkgconfig"
+  - "/share/aclocal"
+  - "/man"
+  - "/share/man"
+  - "/share/gtk-doc"
+  - "/share/vala"
+  - "*.la"
+  - "*.a"
+
+modules:
+  - name: libpeas
+    buildsystem: meson
+    config-opts:
+      - "-Dlua51=false"
+      - "-Dvapi=true"
+      - "-Ddemos=false"
+    sources:
+      - type: archive
+        url: https://download.gnome.org/sources/libpeas/1.26/libpeas-1.26.0.tar.xz
+        sha256: a976d77e20496479a8e955e6a38fb0e5c5de89cf64d9f44e75c2213ee14f7376
+
+  - name: gspell
+    sources:
+      - type: archive
+        url: https://download.gnome.org/sources/gspell/1.8/gspell-1.8.3.tar.xz
+        sha256: 5ae514dd0216be069176accf6d0049d6a01cfa6a50df4bc06be85f7080b62de8
+
+  - name: uchardet
+    buildsystem: cmake
+    builddir: true
+    config-opts:
+      - "-DCMAKE_INSTALL_LIBDIR=lib"
+    sources:
+      - type: archive
+        url: https://www.freedesktop.org/software/uchardet/releases/uchardet-0.0.6.tar.xz
+        sha256: 8351328cdfbcb2432e63938721dd781eb8c11ebc56e3a89d0f84576b96002c61
+
+  - name: amtk
+    sources:
+      - type: archive
+        url: https://download.gnome.org/sources/amtk/5.0/amtk-5.0.2.tar.xz
+        sha256: 71cc891fbaaa3d0cb87eeef9a2f7e1a2acab62f738d09ea922fb4b9ea2f84f86
+
+  - name: tepl
+    buildsystem: meson
+    sources:
+      - type: git
+        url: https://gitlab.gnome.org/GNOME/tepl.git
+
+  - name: gedit
+    buildsystem: meson
+    sources:
+      - type: git
+        url: https://gitlab.gnome.org/GNOME/gedit.git
+
+  - name: gedit-plugins
+    buildsystem: meson
+    sources:
+      - type: git
+        url: https://gitlab.gnome.org/GNOME/gedit-plugins.git
