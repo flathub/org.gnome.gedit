@@ -1,7 +1,7 @@
 ---
 app-id: org.gnome.gedit
 runtime: org.gnome.Platform
-runtime-version: "3.38"
+runtime-version: "40"
 sdk: org.gnome.Sdk
 command: gedit
 
@@ -39,40 +39,41 @@ modules:
       - "-Dglade_catalog=false"
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/libpeas/1.28/libpeas-1.28.0.tar.xz
-        sha256: 42d91993b46ed50f16add6d9577ecc22beb8e2dffa7101e2232c2b63733b8b15
+        url: https://download.gnome.org/sources/libpeas/1.30/libpeas-1.30.0.tar.xz
+        sha256: 0bf5562e9bfc0382a9dcb81f64340787542568762a3a367d9d90f6185898b9a3
 
   - name: gspell
     cleanup:
       - "/bin"
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/gspell/1.8/gspell-1.8.4.tar.xz
-        sha256: cf4d16a716e813449bd631405dc1001ea89537b8cdae2b8abfb3999212bd43b4
+        url: https://download.gnome.org/sources/gspell/1.9/gspell-1.9.1.tar.xz
+        sha256: dcbb769dfdde8e3c0a8ed3102ce7e661abbf7ddf85df08b29915e92cd723abdd
 
   - name: amtk
+    buildsystem: meson
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/amtk/5.2/amtk-5.2.0.tar.xz
-        sha256: 820545bb4cf87ecebc2c3638d6b6e58b8dbd60a419a9b43cf020124e5dad7078
+        url: https://download.gnome.org/sources/amtk/5.3/amtk-5.3.1.tar.xz
+        sha256: d5aa236c5d71dc41aa4674f345560a67a27f21c0efc97c9b3da09cb582b4638b
 
   - name: tepl
     buildsystem: meson
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/tepl/5.0/tepl-5.0.0.tar.xz
-        sha256: c6bd2904f53048b7d0149236610b38f502f2634d395d8b9b3c659553f4045a74
+        url: https://download.gnome.org/sources/tepl/6.00/tepl-6.00.0.tar.xz
+        sha256: a86397a895dca9c0de7a5ccb063bda8f7ef691cccb950ce2cfdee367903e7a63
 
   - name: gedit
     buildsystem: meson
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/gedit/3.38/gedit-3.38.0.tar.xz
-        sha256: 46cf06806de58f6e5e95e34fd98ad0b2c0c50b3dae6d23ca57d16d5cc41856f8
+        url: https://download.gnome.org/sources/gedit/40/gedit-40.0.tar.xz
+        sha256: 0e8aac632b8879a57346aaf35c66f7df40c3fd5ea37a78e04ea218e41e3984e9
 
   - name: gedit-plugins
     buildsystem: meson
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/gedit-plugins/3.38/gedit-plugins-3.38.0.tar.xz
-        sha256: bda2bd5ad7ebdd535d1cc6c8700c295dec64b227c9173c0d2bae0067516259fb
+        url: https://download.gnome.org/sources/gedit-plugins/40/gedit-plugins-40.0.tar.xz
+        sha256: 86de5eb43fa4a3d20ff3abb496d2280ba6046050d7de967c809685e625e37641
