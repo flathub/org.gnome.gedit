@@ -1,60 +1,68 @@
----
 app-id: org.gnome.gedit
 runtime: org.gnome.Platform
-runtime-version: "40"
+runtime-version: '40'
 sdk: org.gnome.Sdk
 command: gedit
 
 finish-args:
-  - "--share=ipc"
-  - "--socket=fallback-x11"
-  - "--socket=wayland"
-  - "--metadata=X-DConf=migrate-path=/org/gnome/gedit/"
+  - --share=ipc
+  - --socket=fallback-x11
+  - --socket=wayland
+  - --metadata=X-DConf=migrate-path=/org/gnome/gedit/
   # Needed at least for the integrated file browser plugin:
-  - "--filesystem=host"
+  - --filesystem=host
   # For opening files from remote locations (with GVfs):
-  - "--talk-name=org.gtk.vfs.*"
+  - --talk-name=org.gtk.vfs.*
 
 cleanup:
-  - "/include"
-  - "/lib/pkgconfig"
-  - "/share/pkgconfig"
-  - "/share/aclocal"
-  - "/man"
-  - "/share/man"
-  - "/share/gtk-doc"
-  - "/share/vala"
-  - "/share/gir-1.0"
-  - "*.la"
-  - "*.a"
+  - /include
+  - /lib/pkgconfig
+  - /share/pkgconfig
+  - /share/aclocal
+  - /man
+  - /share/man
+  - /share/gtk-doc
+  - /share/vala
+  - /share/gir-1.0
+  - '*.la'
+  - '*.a'
 
 modules:
   - name: libpeas
     buildsystem: meson
     config-opts:
-      - "-Dlua51=false"
-      - "-Dvapi=true"
-      - "-Ddemos=false"
-      - "-Dglade_catalog=false"
+      - -Dlua51=false
+      - -Dvapi=true
+      - -Ddemos=false
+      - -Dglade_catalog=false
     sources:
       - type: archive
         url: https://download.gnome.org/sources/libpeas/1.30/libpeas-1.30.0.tar.xz
         sha256: 0bf5562e9bfc0382a9dcb81f64340787542568762a3a367d9d90f6185898b9a3
+        x-checker-data:
+          type: gnome
+          name: libpeas
 
   - name: gspell
     cleanup:
-      - "/bin"
+      - /bin
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/gspell/1.9/gspell-1.9.1.tar.xz
-        sha256: dcbb769dfdde8e3c0a8ed3102ce7e661abbf7ddf85df08b29915e92cd723abdd
+        url: https://download.gnome.org/sources/gspell/1.8/gspell-1.8.4.tar.xz
+        sha256: cf4d16a716e813449bd631405dc1001ea89537b8cdae2b8abfb3999212bd43b4
+        x-checker-data:
+          type: gnome
+          name: gspell
 
   - name: amtk
-    buildsystem: meson
+    buildsystem: autotools
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/amtk/5.3/amtk-5.3.1.tar.xz
-        sha256: d5aa236c5d71dc41aa4674f345560a67a27f21c0efc97c9b3da09cb582b4638b
+        url: https://download.gnome.org/sources/amtk/5.2/amtk-5.2.0.tar.xz
+        sha256: 820545bb4cf87ecebc2c3638d6b6e58b8dbd60a419a9b43cf020124e5dad7078
+        x-checker-data:
+          type: gnome
+          name: amtk
 
   - name: tepl
     buildsystem: meson
@@ -62,40 +70,62 @@ modules:
       - type: archive
         url: https://download.gnome.org/sources/tepl/6.00/tepl-6.00.0.tar.xz
         sha256: a86397a895dca9c0de7a5ccb063bda8f7ef691cccb950ce2cfdee367903e7a63
+        x-checker-data:
+          type: gnome
+          name: tepl
 
   - name: libgit2
     buildsystem: cmake
     sources:
       - type: archive
-        url: https://github.com/libgit2/libgit2/archive/refs/tags/v1.1.1.tar.gz
-        sha256: 13a525373f64c711a00a058514d890d1512080265f98e0935ab279393f21a620
+        url: https://github.com/libgit2/libgit2/archive/refs/tags/v1.2.0.tar.gz
+        sha256: 701a5086a968a46f25e631941b99fc23e4755ca2c56f59371ce1d94b9a0cc643
+        x-checker-data:
+          type: anitya
+          project-id: 1627
+          url-template: https://github.com/libgit2/libgit2/archive/refs/tags/v$version.tar.gz
 
   - name: libgit2-glib
     buildsystem: meson
     config-opts:
       - -Dssh=false
-    sources: 
+    sources:
       - type: archive
-        url: https://gitlab.gnome.org/GNOME/libgit2-glib/-/archive/v0.99.0.1/libgit2-glib-v0.99.0.1.tar.gz
-        sha256: e192985431ed3158826a6e298f7fc78cc9f08368f065f712c756919ad1a1989f
-   
+        url: https://download.gnome.org/sources/libgit2-glib/0.99/libgit2-glib-0.99.0.1.tar.xz
+        sha256: e05a75c444d9c8d5991afc4a5a64cd97d731ce21aeb7c1c651ade1a3b465b9de
+        x-checker-data:
+          type: gnome
+          name: libgit2-glib
+          # TODO: switch to stable in future
+          stable-only: false
+
   - name: dbus-python
     buildsystem: autotools
     sources:
       - type: archive
-        url: https://github.com/freedesktop/dbus-python/archive/refs/tags/dbus-python-1.2.18.tar.gz
-        sha256: 2dc615abc16e884d2434a277b2edf2e4f57be3599a4e30d3aaddceadfa3b47b6
-             
+        url: https://dbus.freedesktop.org/releases/dbus-python/dbus-python-1.2.18.tar.gz
+        sha256: 92bdd1e68b45596c833307a5ff4b217ee6929a1502f5341bae28fd120acf7260
+        x-checker-data:
+          type: anitya
+          project-id: 402
+          url-template: https://dbus.freedesktop.org/releases/dbus-python/dbus-python-$version.tar.gz
+
   - name: gedit
     buildsystem: meson
     sources:
       - type: archive
         url: https://download.gnome.org/sources/gedit/40/gedit-40.1.tar.xz
         sha256: 55e394a82cb65678b1ab49526cf5bd43f00d8fba21476a4849051a8e137d3691
+        x-checker-data:
+          type: gnome
+          name: gedit
 
   - name: gedit-plugins
     buildsystem: meson
     sources:
       - type: archive
-        url: https://download-fallback.gnome.org/sources/gedit-plugins/40/gedit-plugins-40.1.tar.xz
+        url: https://download.gnome.org/sources/gedit-plugins/40/gedit-plugins-40.1.tar.xz
         sha256: dfb7989507a5745cb17c42fb1472207167a387197354f64254118e4a9437c196
+        x-checker-data:
+          type: gnome
+          name: gedit-plugins
