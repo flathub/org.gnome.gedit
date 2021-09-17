@@ -64,13 +64,6 @@ modules:
         url: https://download.gnome.org/sources/tepl/6.00/tepl-6.00.0.tar.xz
         sha256: a86397a895dca9c0de7a5ccb063bda8f7ef691cccb950ce2cfdee367903e7a63
 
-  - name: vte
-    buildsystem: meson
-    sources:
-      - type: archive 
-        url: https://gitlab.gnome.org/GNOME/vte/-/archive/0.65.91/vte-0.65.91.tar.gz
-        sha256: c3f44f53c7587ee6976598712234ec3d3e2e422e9239cad60b058e3ac3677760
-  
   - name: libgit2
     buildsystem: cmake
     sources:
