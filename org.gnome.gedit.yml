@@ -78,8 +78,8 @@ modules:
     buildsystem: cmake
     sources:
       - type: archive
-        url: https://github.com/libgit2/libgit2/archive/refs/tags/v1.3.0.tar.gz
-        sha256: 192eeff84596ff09efb6b01835a066f2df7cd7985e0991c79595688e6b36444e
+        url: https://github.com/libgit2/libgit2/archive/refs/tags/v1.4.2.tar.gz
+        sha256: 901c2b4492976b86477569502a41c31b274b69adc177149c02099ea88404ef19
         x-checker-data:
           type: anitya
           project-id: 1627
@@ -124,8 +124,8 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/gedit-plugins/40/gedit-plugins-40.1.tar.xz
-        sha256: dfb7989507a5745cb17c42fb1472207167a387197354f64254118e4a9437c196
+        url: https://download.gnome.org/sources/gedit-plugins/41/gedit-plugins-41.0.tar.xz
+        sha256: a38f949460914f054063671bf0bb8e8a5184e6210be89f64bb304652d4520e87
         x-checker-data:
           type: gnome
           name: gedit-plugins
