@@ -28,71 +28,6 @@ cleanup:
   - '*.a'
 
 modules:
-  - name: libpeas
-    buildsystem: meson
-    config-opts:
-      - -Dlua51=false
-      - -Dvapi=true
-      - -Ddemos=false
-      - -Dglade_catalog=false
-    sources:
-      - type: archive
-        url: https://download.gnome.org/sources/libpeas/1.32/libpeas-1.32.0.tar.xz
-        sha256: d625520fa02e8977029b246ae439bc218968965f1e82d612208b713f1dcc3d0e
-        x-checker-data:
-          type: gnome
-          name: libpeas
-
-  - name: gspell
-    cleanup:
-      - /bin
-    sources:
-      - type: archive
-        url: https://download.gnome.org/sources/gspell/1.8/gspell-1.8.4.tar.xz
-        sha256: cf4d16a716e813449bd631405dc1001ea89537b8cdae2b8abfb3999212bd43b4
-        x-checker-data:
-          type: gnome
-          name: gspell
-
-  - name: libgit2
-    buildsystem: cmake
-    config-opts:
-      - -DCMAKE_BUILD_TYPE=None
-      - -Wno-dev
-    sources:
-      - type: archive
-        url: https://github.com/libgit2/libgit2/archive/v1.4.2/libgit2-1.4.2.tar.gz
-        sha256: 901c2b4492976b86477569502a41c31b274b69adc177149c02099ea88404ef19
-        x-checker-data:
-          type: anitya
-          project-id: 1627
-          url-template: https://github.com/libgit2/libgit2/archive/v$version/libgit2-$version.tar.gz
-
-  - name: libgit2-glib
-    buildsystem: meson
-    config-opts:
-      - -Dssh=false
-    sources:
-      - type: archive
-        url: https://download.gnome.org/sources/libgit2-glib/1.0/libgit2-glib-1.0.0.1.tar.xz
-        sha256: 460a5d6936950ca08d2d8518bfc90c12bb187cf6e674de715f7055fc58102b57
-        x-checker-data:
-          type: gnome
-          name: libgit2-glib
-          # TODO: switch to stable in future
-          stable-only: false
-
-  - name: dbus-python
-    buildsystem: autotools
-    sources:
-      - type: archive
-        url: https://dbus.freedesktop.org/releases/dbus-python/dbus-python-1.2.18.tar.gz
-        sha256: 92bdd1e68b45596c833307a5ff4b217ee6929a1502f5341bae28fd120acf7260
-        x-checker-data:
-          type: anitya
-          project-id: 402
-          url-template: https://dbus.freedesktop.org/releases/dbus-python/dbus-python-$version.tar.gz
-
   - name: gedit
     buildsystem: meson
     sources:
@@ -103,6 +38,33 @@ modules:
           type: gnome
           name: gedit
 
+    modules:
+      - name: gspell
+        cleanup:
+          - /bin
+        sources:
+          - type: archive
+            url: https://download.gnome.org/sources/gspell/1.8/gspell-1.8.4.tar.xz
+            sha256: cf4d16a716e813449bd631405dc1001ea89537b8cdae2b8abfb3999212bd43b4
+            x-checker-data:
+              type: gnome
+              name: gspell
+
+      - name: libpeas
+        buildsystem: meson
+        config-opts:
+          - -Dlua51=false
+          - -Dvapi=true
+          - -Ddemos=false
+          - -Dglade_catalog=false
+        sources:
+          - type: archive
+            url: https://download.gnome.org/sources/libpeas/1.32/libpeas-1.32.0.tar.xz
+            sha256: d625520fa02e8977029b246ae439bc218968965f1e82d612208b713f1dcc3d0e
+            x-checker-data:
+              type: gnome
+              name: libpeas
+
   - name: gedit-plugins
     buildsystem: meson
     sources:
@@ -112,3 +74,44 @@ modules:
         x-checker-data:
           type: gnome
           name: gedit-plugins
+
+    modules:
+      - name: dbus-python
+        buildsystem: autotools
+        sources:
+          - type: archive
+            url: https://dbus.freedesktop.org/releases/dbus-python/dbus-python-1.2.18.tar.gz
+            sha256: 92bdd1e68b45596c833307a5ff4b217ee6929a1502f5341bae28fd120acf7260
+            x-checker-data:
+              type: anitya
+              project-id: 402
+              url-template: https://dbus.freedesktop.org/releases/dbus-python/dbus-python-$version.tar.gz
+
+      - name: libgit2-glib
+        buildsystem: meson
+        config-opts:
+          - -Dssh=false
+        sources:
+          - type: archive
+            url: https://download.gnome.org/sources/libgit2-glib/1.0/libgit2-glib-1.0.0.1.tar.xz
+            sha256: 460a5d6936950ca08d2d8518bfc90c12bb187cf6e674de715f7055fc58102b57
+            x-checker-data:
+              type: gnome
+              name: libgit2-glib
+              # TODO: switch to stable in future
+              stable-only: false
+
+        modules:
+          - name: libgit2
+            buildsystem: cmake
+            config-opts:
+              - -DCMAKE_BUILD_TYPE=None
+              - -Wno-dev
+            sources:
+              - type: archive
+                url: https://github.com/libgit2/libgit2/archive/v1.4.2/libgit2-1.4.2.tar.gz
+                sha256: 901c2b4492976b86477569502a41c31b274b69adc177149c02099ea88404ef19
+                x-checker-data:
+                  type: anitya
+                  project-id: 1627
+                  url-template: https://github.com/libgit2/libgit2/archive/v$version/libgit2-$version.tar.gz
