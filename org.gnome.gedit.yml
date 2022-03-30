@@ -83,7 +83,7 @@ modules:
         x-checker-data:
           type: anitya
           project-id: 1627
-          url-template: https://github.com/libgit2/libgit2/archive/refs/tags/v$version.tar.gz
+          url-template: https://github.com/libgit2/libgit2/archive/v$version/libgit2-$version.tar.gz
 
   - name: libgit2-glib
     buildsystem: meson
