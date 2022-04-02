@@ -88,6 +88,49 @@ modules:
               project-id: 402
               url-template: https://dbus.freedesktop.org/releases/dbus-python/dbus-python-$version.tar.gz
 
+      - name: gucharmap
+        buildsystem: meson
+        config-opts:
+          - -Ducd_path=/app/share/unicode
+        sources:
+          - type: archive
+            url: https://gitlab.gnome.org/GNOME/gucharmap/-/archive/14.0.3/gucharmap-14.0.3.tar.gz
+            sha256: 410b4ff222de5d3c16d47b0c2c268fe03cde1753872a5d5b6c3877a1e87ef284
+            x-checker-data:
+              type: anitya
+              project-id: 1276
+              stable-only: true
+              url-template: https://gitlab.gnome.org/GNOME/gucharmap/-/archive/$version/gucharmap-$version.tar.gz
+        cleanup:
+          - /share/help
+          - /share/metainfo
+        modules:
+          - name: unicode-character-database
+            buildsystem: simple
+            build-commands:
+              - install -Dm644 {UCD,Unihan}.zip -t ${FLATPAK_DEST}/share/unicode/
+              - bsdtar -xf UCD.zip -C ${FLATPAK_DEST}/share/unicode
+              - bsdtar -xf Unihan.zip -C ${FLATPAK_DEST}/share/unicode
+            sources:
+              - type: file
+                url: https://www.unicode.org/Public/zipped/14.0.0/UCD.zip
+                sha256: 033a5276b5d7af8844589f8e3482f3977a8385e71d107d375055465178c23600
+                x-checker-data:
+                  type: anitya
+                  project-id: 17620
+                  stable-only: true
+                  url-template: https://www.unicode.org/Public/zipped/$version/UCD.zip
+              - type: file
+                url: https://www.unicode.org/Public/zipped/14.0.0/Unihan.zip
+                sha256: 2ae4519b2b82cd4d15379c17e57bfb12c33c0f54da4977de03b2b04bcf11852d
+                x-checker-data:
+                  type: anitya
+                  project-id: 17620
+                  stable-only: true
+                  url-template: https://www.unicode.org/Public/zipped/$version/Unihan.zip
+            cleanup:
+              - '*'
+
       - name: libgit2-glib
         buildsystem: meson
         config-opts:
