@@ -11,7 +11,8 @@ finish-args:
   - --metadata=X-DConf=migrate-path=/org/gnome/gedit/
   # Needed at least for the integrated file browser plugin:
   - --filesystem=host
-  # For opening files from remote locations (with GVfs):
+  # GVfs GIO APIs access using backend URIs
+  - --filesystem=xdg-run/gvfsd
   - --talk-name=org.gtk.vfs.*
 
 cleanup:
