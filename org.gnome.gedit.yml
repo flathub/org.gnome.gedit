@@ -46,8 +46,8 @@ modules:
           - /bin
         sources:
           - type: archive
-            url: https://download.gnome.org/sources/gspell/1.8/gspell-1.8.4.tar.xz
-            sha256: cf4d16a716e813449bd631405dc1001ea89537b8cdae2b8abfb3999212bd43b4
+            url: https://download.gnome.org/sources/gspell/1.10/gspell-1.10.0.tar.xz
+            sha256: 803bb884c0215d3fd22a85d7f30423aff88d9792f05a5199d8a489a2ffaae1da
             x-checker-data:
               type: gnome
               name: gspell
@@ -154,8 +154,8 @@ modules:
               - -Wno-dev
             sources:
               - type: archive
-                url: https://github.com/libgit2/libgit2/archive/v1.4.2/libgit2-1.4.2.tar.gz
-                sha256: 901c2b4492976b86477569502a41c31b274b69adc177149c02099ea88404ef19
+                url: https://github.com/libgit2/libgit2/archive/v1.4.3/libgit2-1.4.3.tar.gz
+                sha256: f48b961e463a9e4e7e7e58b21a0fb5a9b2a1d24d9ba4d15870a0c9b8ad965163
                 x-checker-data:
                   type: anitya
                   project-id: 1627
