@@ -33,8 +33,8 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/gedit/42/gedit-42.0.tar.xz
-        sha256: a87991f42961eb4f6abcdbaabb784760c23aeaeefae6363d3e21a61e9c458437
+        url: https://download.gnome.org/sources/gedit/42/gedit-42.1.tar.xz
+        sha256: 7f1fd43df5110d4c37de6541993f41f0fbc3efc790900e92053479ba069920e9
         x-checker-data:
           type: gnome
           name: gedit
@@ -71,8 +71,8 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/gedit-plugins/42/gedit-plugins-42.0.tar.xz
-        sha256: 7246420fbc3d3950ef78d2e346e21306440e71c64d74f6e8c44e51a58cd0db62
+        url: https://download.gnome.org/sources/gedit-plugins/42/gedit-plugins-42.1.tar.xz
+        sha256: c6b741de7d2610b0e474ef1b72a2a587e236998573403d527fe18e9e3de2623d
         x-checker-data:
           type: gnome
           name: gedit-plugins
