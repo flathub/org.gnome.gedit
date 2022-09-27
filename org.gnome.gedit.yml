@@ -46,8 +46,8 @@ modules:
           - /bin
         sources:
           - type: archive
-            url: https://download.gnome.org/sources/gspell/1.10/gspell-1.10.0.tar.xz
-            sha256: 803bb884c0215d3fd22a85d7f30423aff88d9792f05a5199d8a489a2ffaae1da
+            url: https://download.gnome.org/sources/gspell/1.12/gspell-1.12.0.tar.xz
+            sha256: 40d2850f1bb6e8775246fa1e39438b36caafbdbada1d28a19fa1ca07e1ff82ad
             x-checker-data:
               type: gnome
               name: gspell
@@ -164,6 +164,6 @@ modules:
   - name: vte
     buildsystem: meson
     sources:
-      - type: archive 
+      - type: archive
         url: https://gitlab.gnome.org/GNOME/vte/-/archive/0.70.0/vte-0.70.0.tar.gz
         sha256: ce3bce414ff9515b3dc73b4cea2c252c02355481b6e353c4c3464e3739a54208
