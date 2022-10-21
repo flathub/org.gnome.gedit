@@ -95,8 +95,8 @@ modules:
           - -Ducd_path=/app/share/unicode
         sources:
           - type: archive
-            url: https://gitlab.gnome.org/GNOME/gucharmap/-/archive/15.0.0/gucharmap-15.0.0.tar.gz
-            sha256: c5e412f51eff7630a67604757ebc9bf13392e94edc4f3b60b8049b6f87f7af90
+            url: https://gitlab.gnome.org/GNOME/gucharmap/-/archive/15.0.1/gucharmap-15.0.1.tar.gz
+            sha256: 6f73d7603fbb3753fae14c31466e01f4c4f6f2c486963e373460e511c2a3d076
             x-checker-data:
               type: anitya
               project-id: 1276
