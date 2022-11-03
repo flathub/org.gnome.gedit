@@ -33,8 +33,8 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/gedit/42/gedit-42.2.tar.xz
-        sha256: 3c6229111f0ac066ae44964920791d1265f5bbb56b0bd949a69b7b1261fc8fca
+        url: https://download.gnome.org/sources/gedit/43/gedit-43.0.tar.xz
+        sha256: 3afe85df81842bfa826eab8de0a64fd840364cd2a9ed2adda5f8a203cdf27d56
         x-checker-data:
           type: gnome
           name: gedit
@@ -71,8 +71,8 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/gedit-plugins/42/gedit-plugins-42.1.tar.xz
-        sha256: c6b741de7d2610b0e474ef1b72a2a587e236998573403d527fe18e9e3de2623d
+        url: https://download.gnome.org/sources/gedit-plugins/43/gedit-plugins-43.0.tar.xz
+        sha256: 295d8efeb00599a38f3294bc11b4df1859773224483c0d8ce140bc9e6fe6cdb0
         x-checker-data:
           type: gnome
           name: gedit-plugins
@@ -95,8 +95,8 @@ modules:
           - -Ducd_path=/app/share/unicode
         sources:
           - type: archive
-            url: https://gitlab.gnome.org/GNOME/gucharmap/-/archive/15.0.0/gucharmap-15.0.0.tar.gz
-            sha256: c5e412f51eff7630a67604757ebc9bf13392e94edc4f3b60b8049b6f87f7af90
+            url: https://gitlab.gnome.org/GNOME/gucharmap/-/archive/15.0.1/gucharmap-15.0.1.tar.gz
+            sha256: 6f73d7603fbb3753fae14c31466e01f4c4f6f2c486963e373460e511c2a3d076
             x-checker-data:
               type: anitya
               project-id: 1276
