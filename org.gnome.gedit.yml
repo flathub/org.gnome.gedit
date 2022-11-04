@@ -1,6 +1,6 @@
 app-id: org.gnome.gedit
 runtime: org.gnome.Platform
-runtime-version: '42'
+runtime-version: '43'
 sdk: org.gnome.Sdk
 command: gedit
 
@@ -33,8 +33,8 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/gedit/42/gedit-42.2.tar.xz
-        sha256: 3c6229111f0ac066ae44964920791d1265f5bbb56b0bd949a69b7b1261fc8fca
+        url: https://download.gnome.org/sources/gedit/43/gedit-43.1.tar.xz
+        sha256: 98383b4afd3fd1ea18cdc74fec6e128e778582f3b23f5360191413fff8f0e6a6
         x-checker-data:
           type: gnome
           name: gedit
@@ -67,12 +67,32 @@ modules:
               type: gnome
               name: libpeas
 
+      - name: amtk
+        buildsystem: meson
+        sources:
+          - type: archive
+            url: https://download.gnome.org/sources/amtk/5.6/amtk-5.6.0.tar.xz
+            sha256: f3db8797442a9b85062acd0b3e17ac9125a0b487e14216d09b03b08841820eb9
+            x-checker-data:
+              type: gnome
+              name: amtk
+
+      - name: tepl
+        buildsystem: meson
+        sources:
+          - type: archive
+            url: https://download.gnome.org/sources/tepl/6.2/tepl-6.2.0.tar.xz
+            sha256: 8cd6865c2c38188760cb38cae33dc9e0a888fad18d0b04f1d55e656aa989a844
+            x-checker-data:
+              type: gnome
+              name: tepl
+
   - name: gedit-plugins
     buildsystem: meson
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/gedit-plugins/42/gedit-plugins-42.1.tar.xz
-        sha256: c6b741de7d2610b0e474ef1b72a2a587e236998573403d527fe18e9e3de2623d
+        url: https://download.gnome.org/sources/gedit-plugins/43/gedit-plugins-43.1.tar.xz
+        sha256: 93a4ff0f60e8283293f16c242c25eb197e5e7bdc06cbe8891b82cf1d46cc6e1d
         x-checker-data:
           type: gnome
           name: gedit-plugins
@@ -95,14 +115,15 @@ modules:
           - -Ducd_path=/app/share/unicode
         sources:
           - type: archive
-            url: https://gitlab.gnome.org/GNOME/gucharmap/-/archive/15.0.0/gucharmap-15.0.0.tar.gz
-            sha256: c5e412f51eff7630a67604757ebc9bf13392e94edc4f3b60b8049b6f87f7af90
+            url: https://gitlab.gnome.org/GNOME/gucharmap/-/archive/15.0.1/gucharmap-15.0.1.tar.gz
+            sha256: 6f73d7603fbb3753fae14c31466e01f4c4f6f2c486963e373460e511c2a3d076
             x-checker-data:
               type: anitya
               project-id: 1276
               stable-only: true
               url-template: https://gitlab.gnome.org/GNOME/gucharmap/-/archive/$version/gucharmap-$version.tar.gz
         cleanup:
+          - /bin
           - /share/help
           - /share/metainfo
         modules:
@@ -148,6 +169,8 @@ modules:
 
         modules:
           - name: libgit2
+            cleanup:
+              - /bin
             buildsystem: cmake
             config-opts:
               - -DCMAKE_BUILD_TYPE=None
@@ -163,6 +186,8 @@ modules:
 
   - name: vte
     buildsystem: meson
+    cleanup:
+          - /bin
     sources:
       - type: archive
         url: https://gitlab.gnome.org/GNOME/vte/-/archive/0.70.0/vte-0.70.0.tar.gz
