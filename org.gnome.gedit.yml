@@ -33,8 +33,8 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/gedit/43/gedit-43.1.tar.xz
-        sha256: 98383b4afd3fd1ea18cdc74fec6e128e778582f3b23f5360191413fff8f0e6a6
+        url: https://download.gnome.org/sources/gedit/43/gedit-43.2.tar.xz
+        sha256: f950d2d35c594bb6c8dbc9f5440cad7788ca0a8688e2b07846f83de9a4e3fc25
         x-checker-data:
           type: gnome
           name: gedit
@@ -71,8 +71,8 @@ modules:
         buildsystem: meson
         sources:
           - type: archive
-            url: https://download.gnome.org/sources/amtk/5.6/amtk-5.6.0.tar.xz
-            sha256: f3db8797442a9b85062acd0b3e17ac9125a0b487e14216d09b03b08841820eb9
+            url: https://download.gnome.org/sources/amtk/5.6/amtk-5.6.1.tar.xz
+            sha256: d50115b85c872aac296934b5ee726a3fa156c6f5ad96d27e0edd0aa5ad173228
             x-checker-data:
               type: gnome
               name: amtk
@@ -187,7 +187,7 @@ modules:
   - name: vte
     buildsystem: meson
     cleanup:
-          - /bin
+      - /bin
     sources:
       - type: archive
         url: https://gitlab.gnome.org/GNOME/vte/-/archive/0.70.0/vte-0.70.0.tar.gz
