@@ -81,8 +81,8 @@ modules:
         buildsystem: meson
         sources:
           - type: archive
-            url: https://download.gnome.org/sources/tepl/6.2/tepl-6.2.0.tar.xz
-            sha256: 8cd6865c2c38188760cb38cae33dc9e0a888fad18d0b04f1d55e656aa989a844
+            url: https://download.gnome.org/sources/tepl/6.4/tepl-6.4.0.tar.xz
+            sha256: 5e56b20669d0cf05fa1d64b58c8c342c59158122dc518100d093d59df9b87321
             x-checker-data:
               type: gnome
               name: tepl
