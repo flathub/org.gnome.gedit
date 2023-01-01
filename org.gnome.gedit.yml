@@ -33,8 +33,8 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/gedit/43/gedit-43.2.tar.xz
-        sha256: f950d2d35c594bb6c8dbc9f5440cad7788ca0a8688e2b07846f83de9a4e3fc25
+        url: https://download.gnome.org/sources/gedit/44/gedit-44.0.tar.xz
+        sha256: 82e6b33d8957cc19e30dba10402585f98d2e25e76a9be97ead83418103074502
         x-checker-data:
           type: gnome
           name: gedit
@@ -81,8 +81,8 @@ modules:
         buildsystem: meson
         sources:
           - type: archive
-            url: https://download.gnome.org/sources/tepl/6.2/tepl-6.2.0.tar.xz
-            sha256: 8cd6865c2c38188760cb38cae33dc9e0a888fad18d0b04f1d55e656aa989a844
+            url: https://download.gnome.org/sources/tepl/6.4/tepl-6.4.0.tar.xz
+            sha256: 5e56b20669d0cf05fa1d64b58c8c342c59158122dc518100d093d59df9b87321
             x-checker-data:
               type: gnome
               name: tepl
@@ -91,8 +91,8 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/gedit-plugins/43/gedit-plugins-43.1.tar.xz
-        sha256: 93a4ff0f60e8283293f16c242c25eb197e5e7bdc06cbe8891b82cf1d46cc6e1d
+        url: https://download.gnome.org/sources/gedit-plugins/44/gedit-plugins-44.0.tar.xz
+        sha256: 1e9ee3a92582587d178611f6e0a4afbd14ac1b47209537f443796eb9710826b6
         x-checker-data:
           type: gnome
           name: gedit-plugins
