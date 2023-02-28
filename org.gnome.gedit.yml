@@ -177,8 +177,8 @@ modules:
               - -Wno-dev
             sources:
               - type: archive
-                url: https://github.com/libgit2/libgit2/archive/v1.5.1/libgit2-1.5.1.tar.gz
-                sha256: a5cf175e40c36e8f730c49a11b70c2a3251e9ed417dac3875ac3fef40eb7c712
+                url: https://github.com/libgit2/libgit2/archive/v1.6.2/libgit2-1.6.2.tar.gz
+                sha256: d557fbf35557bb5df53cbf38ae0081edb4a36494ec0d19741fa673e509245f8f
                 x-checker-data:
                   type: anitya
                   project-id: 1627
