@@ -61,8 +61,8 @@ modules:
           - -Dglade_catalog=false
         sources:
           - type: archive
-            url: https://download.gnome.org/sources/libpeas/1.34/libpeas-1.34.0.tar.xz
-            sha256: 4305f715dab4b5ad3e8007daec316625e7065a94e63e25ef55eb1efb964a7bf0
+            url: https://download.gnome.org/sources/libpeas/1.36/libpeas-1.36.0.tar.xz
+            sha256: 297cb9c2cccd8e8617623d1a3e8415b4530b8e5a893e3527bbfd1edd13237b4c
             x-checker-data:
               type: gnome
               name: libpeas
@@ -115,8 +115,8 @@ modules:
           - -Ducd_path=/app/share/unicode
         sources:
           - type: archive
-            url: https://gitlab.gnome.org/GNOME/gucharmap/-/archive/15.0.2/gucharmap-15.0.2.tar.gz
-            sha256: 4224479485c137959b9076143a71a22f96946678551f1836592d69d070c47a2d
+            url: https://gitlab.gnome.org/GNOME/gucharmap/-/archive/15.0.3/gucharmap-15.0.3.tar.gz
+            sha256: 38421b3ca61acca9e45e10e33b0ef20dc00dde2e57319fbb10c1a15376483399
             x-checker-data:
               type: anitya
               project-id: 1276
@@ -177,8 +177,8 @@ modules:
               - -Wno-dev
             sources:
               - type: archive
-                url: https://github.com/libgit2/libgit2/archive/v1.5.1/libgit2-1.5.1.tar.gz
-                sha256: a5cf175e40c36e8f730c49a11b70c2a3251e9ed417dac3875ac3fef40eb7c712
+                url: https://github.com/libgit2/libgit2/archive/v1.6.2/libgit2-1.6.2.tar.gz
+                sha256: d557fbf35557bb5df53cbf38ae0081edb4a36494ec0d19741fa673e509245f8f
                 x-checker-data:
                   type: anitya
                   project-id: 1627
