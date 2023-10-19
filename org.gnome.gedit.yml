@@ -55,7 +55,7 @@ modules:
       - name: libgedit-amtk
         buildsystem: meson
         config-opts:
-          - "-Dgtk_doc=false"
+          - -Dgtk_doc=false
         sources:
           - type: git
             url: https://github.com/gedit-technology/libgedit-amtk.git
@@ -76,14 +76,14 @@ modules:
             x-checker-data:
               type: gnome
               versions:
-                '<': "1.37"
+                <: '1.37'
               name: libpeas
 
       - name: libgedit-gtksourceview
         buildsystem: meson
         config-opts:
-          - "-Dgtk_doc=false"
-          - "-Dtests_relying_on_external_programs=false"
+          - -Dgtk_doc=false
+          - -Dtests_relying_on_external_programs=false
         sources:
           - type: git
             url: https://github.com/gedit-technology/libgedit-gtksourceview.git
@@ -128,8 +128,8 @@ modules:
           - -Ducd_path=/app/share/unicode
         sources:
           - type: archive
-            url: https://gitlab.gnome.org/GNOME/gucharmap/-/archive/15.0.2/gucharmap-15.0.2.tar.gz
-            sha256: 4224479485c137959b9076143a71a22f96946678551f1836592d69d070c47a2d
+            url: https://gitlab.gnome.org/GNOME/gucharmap/-/archive/15.1.2/gucharmap-15.1.2.tar.gz
+            sha256: c8271b7260973a4e7e185df7b4e6109a8824f859d69b78382ce49234d3cc686b
             x-checker-data:
               type: anitya
               project-id: 1276
@@ -148,16 +148,16 @@ modules:
               - bsdtar -xf Unihan.zip -C ${FLATPAK_DEST}/share/unicode
             sources:
               - type: file
-                url: https://www.unicode.org/Public/zipped/15.0.0/UCD.zip
-                sha256: 5fbde400f3e687d25cc9b0a8d30d7619e76cb2f4c3e85ba9df8ec1312cb6718c
+                url: https://www.unicode.org/Public/zipped/15.1.0/UCD.zip
+                sha256: cb1c663d053926500cd501229736045752713a066bd75802098598b7a7056177
                 x-checker-data:
                   type: anitya
                   project-id: 17620
                   stable-only: true
                   url-template: https://www.unicode.org/Public/zipped/$version/UCD.zip
               - type: file
-                url: https://www.unicode.org/Public/zipped/15.0.0/Unihan.zip
-                sha256: 24b154691fc97cb44267b925d62064297086b3f896b57a8181c7b6d42702a026
+                url: https://www.unicode.org/Public/zipped/15.1.0/Unihan.zip
+                sha256: a0226610e324bcf784ac380e11f4cbf533ee1e6b3d028b0991bf8c0dc3f85853
                 x-checker-data:
                   type: anitya
                   project-id: 17620
