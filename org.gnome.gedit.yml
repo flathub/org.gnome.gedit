@@ -33,8 +33,8 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/gedit/46/gedit-46.1.tar.xz
-        sha256: a1a6e37f041765dff7227a1f5578b6f49faaf016b1e17e869caf5bfb94c6aa4e
+        url: https://download.gnome.org/sources/gedit/46/gedit-46.2.tar.xz
+        sha256: c0866412bad147ebace2d282ffcbb5a0e9a304b20fd55640bee21c81e6d501ef
         x-checker-data:
           type: gnome
           name: gedit
@@ -128,8 +128,8 @@ modules:
           - -Ducd_path=/app/share/unicode
         sources:
           - type: archive
-            url: https://gitlab.gnome.org/GNOME/gucharmap/-/archive/15.1.2/gucharmap-15.1.2.tar.gz
-            sha256: c8271b7260973a4e7e185df7b4e6109a8824f859d69b78382ce49234d3cc686b
+            url: https://gitlab.gnome.org/GNOME/gucharmap/-/archive/15.1.3/gucharmap-15.1.3.tar.gz
+            sha256: d6086d301e9c02cc85ac9fac45b93f5e0b69d516b04ba890f3107eed470a5b7b
             x-checker-data:
               type: anitya
               project-id: 1276
@@ -190,8 +190,8 @@ modules:
               - -Wno-dev
             sources:
               - type: archive
-                url: https://github.com/libgit2/libgit2/archive/v1.7.1/libgit2-1.7.1.tar.gz
-                sha256: 17d2b292f21be3892b704dddff29327b3564f96099a1c53b00edc23160c71327
+                url: https://github.com/libgit2/libgit2/archive/v1.8.0/libgit2-1.8.0.tar.gz
+                sha256: 9e1d6a880d59026b675456fbb1593c724c68d73c34c0d214d6eb848e9bbd8ae4
                 x-checker-data:
                   type: anitya
                   project-id: 1627
