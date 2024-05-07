@@ -33,8 +33,8 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/gedit/46/gedit-46.1.tar.xz
-        sha256: a1a6e37f041765dff7227a1f5578b6f49faaf016b1e17e869caf5bfb94c6aa4e
+        url: https://download.gnome.org/sources/gedit/47/gedit-47.0.tar.xz
+        sha256: fa4a597e34c76d4ac91431b5ae6e191c96c6b0af1702e0899ab35199edfa1bfa
         x-checker-data:
           type: gnome
           name: gedit
@@ -104,8 +104,8 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/gedit-plugins/46/gedit-plugins-46.0.tar.xz
-        sha256: db6b4aa72dac0190a8ae497f770f5a4ba66ae3cf1e03ea8b744e6101df09b251
+        url: https://download.gnome.org/sources/gedit-plugins/47/gedit-plugins-47.1.tar.xz
+        sha256: af9d63e5822ac08c68e3b898bb58e7debc1bfeaaca1077f5a8e795d25a164c8b
         x-checker-data:
           type: gnome
           name: gedit-plugins
@@ -128,8 +128,8 @@ modules:
           - -Ducd_path=/app/share/unicode
         sources:
           - type: archive
-            url: https://gitlab.gnome.org/GNOME/gucharmap/-/archive/15.1.2/gucharmap-15.1.2.tar.gz
-            sha256: c8271b7260973a4e7e185df7b4e6109a8824f859d69b78382ce49234d3cc686b
+            url: https://gitlab.gnome.org/GNOME/gucharmap/-/archive/15.1.4/gucharmap-15.1.4.tar.gz
+            sha256: 2f85a6da0a8c85b43189b4c1117ecf18d06d2a82e3f303453c66f6826388eae3
             x-checker-data:
               type: anitya
               project-id: 1276
@@ -156,8 +156,8 @@ modules:
                   stable-only: true
                   url-template: https://www.unicode.org/Public/zipped/$version/UCD.zip
               - type: file
-                url: https://www.unicode.org/Public/zipped/15.0.0/Unihan.zip
-                sha256: 24b154691fc97cb44267b925d62064297086b3f896b57a8181c7b6d42702a026
+                url: https://www.unicode.org/Public/zipped/15.1.0/Unihan.zip
+                sha256: a0226610e324bcf784ac380e11f4cbf533ee1e6b3d028b0991bf8c0dc3f85853
                 x-checker-data:
                   type: anitya
                   project-id: 17620
@@ -190,8 +190,8 @@ modules:
               - -Wno-dev
             sources:
               - type: archive
-                url: https://github.com/libgit2/libgit2/archive/v1.7.1/libgit2-1.7.1.tar.gz
-                sha256: 17d2b292f21be3892b704dddff29327b3564f96099a1c53b00edc23160c71327
+                url: https://github.com/libgit2/libgit2/archive/v1.8.0/libgit2-1.8.0.tar.gz
+                sha256: 9e1d6a880d59026b675456fbb1593c724c68d73c34c0d214d6eb848e9bbd8ae4
                 x-checker-data:
                   type: anitya
                   project-id: 1627
