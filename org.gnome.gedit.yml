@@ -1,6 +1,6 @@
 app-id: org.gnome.gedit
 runtime: org.gnome.Platform
-runtime-version: '45'
+runtime-version: '46'
 sdk: org.gnome.Sdk
 command: gedit
 
@@ -52,6 +52,16 @@ modules:
               type: gnome
               name: gspell
 
+      - name: libgedit-gfls
+        buildsystem: meson
+        config-opts:
+          - -Dgtk_doc=false
+        sources:
+          - type: git
+            url: https://github.com/gedit-technology/libgedit-gfls.git
+            tag: 0.1.0
+            commit: 5d905c03f38a599862a5ea94815ba3044403a6a2
+
       - name: libgedit-amtk
         buildsystem: meson
         config-opts:
@@ -83,22 +93,21 @@ modules:
         buildsystem: meson
         config-opts:
           - -Dgtk_doc=false
-          - -Dtests_relying_on_external_programs=false
         sources:
           - type: git
             url: https://github.com/gedit-technology/libgedit-gtksourceview.git
-            tag: 299.0.4
-            commit: 7062264d635f6efe04d88217a893a97ff385b873
+            tag: 299.2.1
+            commit: eaafc892d033713c7c823d8ad602061e456b3c88
 
-      - name: tepl
+      - name: libgedit-tepl
         buildsystem: meson
+        config-opts:
+          - -Dgtk_doc=false
         sources:
-          - type: archive
-            url: https://download.gnome.org/sources/tepl/6.8/tepl-6.8.0.tar.xz
-            sha256: 46e6e5f1bfdbc52e5956f06add575e9c7697c673d53d3803dfe768f490b560f0
-            x-checker-data:
-              type: gnome
-              name: tepl
+          - type: git
+            url: https://github.com/gedit-technology/libgedit-tepl.git
+            tag: 6.10.0
+            commit: e39d30e6c683e271db48dd984d919634564b0deb
 
   - name: gedit-plugins
     buildsystem: meson
