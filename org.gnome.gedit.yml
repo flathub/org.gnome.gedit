@@ -76,7 +76,6 @@ modules:
         buildsystem: meson
         config-opts:
           - -Dlua51=false
-          - -Dvapi=true
           - -Ddemos=false
           - -Dglade_catalog=false
         sources:
