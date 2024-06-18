@@ -51,6 +51,7 @@ modules:
             x-checker-data:
               type: gnome
               name: gspell
+              stable-only: true
 
       - name: libgedit-gfls
         buildsystem: meson
@@ -61,6 +62,9 @@ modules:
             url: https://github.com/gedit-technology/libgedit-gfls.git
             tag: 0.1.0
             commit: 5d905c03f38a599862a5ea94815ba3044403a6a2
+            x-checker-data:
+              type: git
+              tag-pattern: '^0\.1\.\d+$'
 
       - name: libgedit-amtk
         buildsystem: meson
@@ -71,6 +75,9 @@ modules:
             url: https://github.com/gedit-technology/libgedit-amtk.git
             tag: 5.8.0
             commit: f6fbfd1c57de3d97cab2056a5c3088b0da49e8a4
+            x-checker-data:
+              type: git
+              tag-pattern: '^5\.\d+\.\d+$'
 
       - name: libpeas
         buildsystem: meson
@@ -97,6 +104,9 @@ modules:
             url: https://github.com/gedit-technology/libgedit-gtksourceview.git
             tag: 299.2.1
             commit: eaafc892d033713c7c823d8ad602061e456b3c88
+            x-checker-data:
+              type: git
+              tag-pattern: '^299\.2\.\d+$'
 
       - name: libgedit-tepl
         buildsystem: meson
@@ -107,6 +117,9 @@ modules:
             url: https://github.com/gedit-technology/libgedit-tepl.git
             tag: 6.10.0
             commit: e39d30e6c683e271db48dd984d919634564b0deb
+            x-checker-data:
+              type: git
+              tag-pattern: '^6\.10\.\d+$'
 
   - name: gedit-plugins
     buildsystem: meson
@@ -117,6 +130,7 @@ modules:
         x-checker-data:
           type: gnome
           name: gedit-plugins
+          stable-only: true
 
     modules:
       - name: gucharmap
@@ -174,8 +188,7 @@ modules:
             x-checker-data:
               type: gnome
               name: libgit2-glib
-              # TODO: switch to stable in future
-              stable-only: false
+              stable-only: true
 
         modules:
           - name: libgit2
@@ -202,3 +215,7 @@ modules:
           - type: archive
             url: https://download.gnome.org/sources/vte/0.76/vte-0.76.3.tar.xz
             sha256: f678e94c056f377fd0021214adff5450cb172e9a08b160911181ddff7b7d5d60
+            x-checker-data:
+              type: gnome
+              name: vte
+              stable-only: true
