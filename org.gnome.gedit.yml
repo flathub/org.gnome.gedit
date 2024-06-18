@@ -195,11 +195,11 @@ modules:
                   project-id: 1627
                   url-template: https://github.com/libgit2/libgit2/archive/v$version/libgit2-$version.tar.gz
 
-  - name: vte
-    buildsystem: meson
-    cleanup:
-      - /bin
-    sources:
-      - type: archive
-        url: https://gitlab.gnome.org/GNOME/vte/-/archive/0.70.0/vte-0.70.0.tar.gz
-        sha256: ce3bce414ff9515b3dc73b4cea2c252c02355481b6e353c4c3464e3739a54208
+      - name: vte
+        buildsystem: meson
+        cleanup:
+          - /bin
+        sources:
+          - type: archive
+            url: https://gitlab.gnome.org/GNOME/vte/-/archive/0.70.0/vte-0.70.0.tar.gz
+            sha256: ce3bce414ff9515b3dc73b4cea2c252c02355481b6e353c4c3464e3739a54208
