@@ -64,7 +64,7 @@ modules:
             commit: 5d905c03f38a599862a5ea94815ba3044403a6a2
             x-checker-data:
               type: git
-              tag-pattern: '^0\.1\.\d+$'
+              tag-pattern: ^0\.1\.\d+$
 
       - name: libgedit-amtk
         buildsystem: meson
@@ -77,7 +77,7 @@ modules:
             commit: f6fbfd1c57de3d97cab2056a5c3088b0da49e8a4
             x-checker-data:
               type: git
-              tag-pattern: '^5\.\d+\.\d+$'
+              tag-pattern: ^5\.\d+\.\d+$
 
       - name: libpeas
         buildsystem: meson
@@ -106,7 +106,7 @@ modules:
             commit: eaafc892d033713c7c823d8ad602061e456b3c88
             x-checker-data:
               type: git
-              tag-pattern: '^299\.2\.\d+$'
+              tag-pattern: ^299\.2\.\d+$
 
       - name: libgedit-tepl
         buildsystem: meson
@@ -119,7 +119,7 @@ modules:
             commit: e39d30e6c683e271db48dd984d919634564b0deb
             x-checker-data:
               type: git
-              tag-pattern: '^6\.10\.\d+$'
+              tag-pattern: ^6\.10\.\d+$
 
   - name: gedit-plugins
     buildsystem: meson
@@ -139,8 +139,8 @@ modules:
           - -Ducd_path=/app/share/unicode
         sources:
           - type: archive
-            url: https://gitlab.gnome.org/GNOME/gucharmap/-/archive/15.1.5/gucharmap-15.1.5.tar.gz
-            sha256: ff0858e9e36c5ff70a5798b4d879d4ad576fdbf9225358c53ce5bbde31d67a08
+            url: https://gitlab.gnome.org/GNOME/gucharmap/-/archive/16.0.0/gucharmap-16.0.0.tar.gz
+            sha256: 099ab2a74dbb7e2b90a595123bd194af490881487b59e54257f582667653b211
             x-checker-data:
               type: anitya
               project-id: 1276
@@ -159,16 +159,16 @@ modules:
               - bsdtar -xf Unihan.zip -C ${FLATPAK_DEST}/share/unicode
             sources:
               - type: file
-                url: https://www.unicode.org/Public/zipped/15.1.0/UCD.zip
-                sha256: cb1c663d053926500cd501229736045752713a066bd75802098598b7a7056177
+                url: https://www.unicode.org/Public/zipped/16.0.0/UCD.zip
+                sha256: c86dd81f2b14a43b0cc064aa5f89aa7241386801e35c59c7984e579832634eb2
                 x-checker-data:
                   type: anitya
                   project-id: 17620
                   stable-only: true
                   url-template: https://www.unicode.org/Public/zipped/$version/UCD.zip
               - type: file
-                url: https://www.unicode.org/Public/zipped/15.1.0/Unihan.zip
-                sha256: a0226610e324bcf784ac380e11f4cbf533ee1e6b3d028b0991bf8c0dc3f85853
+                url: https://www.unicode.org/Public/zipped/16.0.0/Unihan.zip
+                sha256: b8f000df69de7828d21326a2ffea462b04bc7560022989f7cc704f10521ef3e0
                 x-checker-data:
                   type: anitya
                   project-id: 17620
@@ -215,8 +215,8 @@ modules:
           - /bin
         sources:
           - type: archive
-            url: https://download.gnome.org/sources/vte/0.76/vte-0.76.3.tar.xz
-            sha256: f678e94c056f377fd0021214adff5450cb172e9a08b160911181ddff7b7d5d60
+            url: https://download.gnome.org/sources/vte/0.77/vte-0.77.92.tar.xz
+            sha256: fc90138274afb3ddda3cdad12d9c59a3384206999df54eb0e2011f0eb07f6b0f
             x-checker-data:
               type: gnome
               name: vte
