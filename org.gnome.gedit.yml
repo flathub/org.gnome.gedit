@@ -33,8 +33,8 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/gedit/47/gedit-47.0.tar.xz
-        sha256: fa4a597e34c76d4ac91431b5ae6e191c96c6b0af1702e0899ab35199edfa1bfa
+        url: https://download.gnome.org/sources/gedit/48/gedit-48.0.tar.xz
+        sha256: fe0fef9b7b0799120db86ae893a060036a13445352ded9169bab28d38acf0e80
         x-checker-data:
           type: gnome
           name: gedit
@@ -46,8 +46,8 @@ modules:
           - /bin
         sources:
           - type: archive
-            url: https://download.gnome.org/sources/gspell/1.12/gspell-1.12.2.tar.xz
-            sha256: b4e993bd827e4ceb6a770b1b5e8950fce3be9c8b2b0cbeb22fdf992808dd2139
+            url: https://download.gnome.org/sources/gspell/1.14/gspell-1.14.0.tar.xz
+            sha256: 64ea1d8e9edc1c25b45a920e80daf67559d1866ffcd7f8432fecfea6d0fe8897
             x-checker-data:
               type: gnome
               name: gspell
@@ -125,8 +125,8 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/gedit-plugins/47/gedit-plugins-47.1.tar.xz
-        sha256: af9d63e5822ac08c68e3b898bb58e7debc1bfeaaca1077f5a8e795d25a164c8b
+        url: https://download.gnome.org/sources/gedit-plugins/48/gedit-plugins-48.0.tar.xz
+        sha256: 75fb90e219d46c332b071262ca6fa1cb597b31de97db80c1879d851cf645eb98
         x-checker-data:
           type: gnome
           name: gedit-plugins
@@ -159,16 +159,16 @@ modules:
               - bsdtar -xf Unihan.zip -C ${FLATPAK_DEST}/share/unicode
             sources:
               - type: file
-                url: https://www.unicode.org/Public/zipped/15.1.0/UCD.zip
-                sha256: cb1c663d053926500cd501229736045752713a066bd75802098598b7a7056177
+                url: https://www.unicode.org/Public/zipped/16.0.0/UCD.zip
+                sha256: c86dd81f2b14a43b0cc064aa5f89aa7241386801e35c59c7984e579832634eb2
                 x-checker-data:
                   type: anitya
                   project-id: 17620
                   stable-only: true
                   url-template: https://www.unicode.org/Public/zipped/$version/UCD.zip
               - type: file
-                url: https://www.unicode.org/Public/zipped/15.1.0/Unihan.zip
-                sha256: a0226610e324bcf784ac380e11f4cbf533ee1e6b3d028b0991bf8c0dc3f85853
+                url: https://www.unicode.org/Public/zipped/16.0.0/Unihan.zip
+                sha256: b8f000df69de7828d21326a2ffea462b04bc7560022989f7cc704f10521ef3e0
                 x-checker-data:
                   type: anitya
                   project-id: 17620
@@ -215,8 +215,8 @@ modules:
           - /bin
         sources:
           - type: archive
-            url: https://download.gnome.org/sources/vte/0.77/vte-0.77.92.tar.xz
-            sha256: fc90138274afb3ddda3cdad12d9c59a3384206999df54eb0e2011f0eb07f6b0f
+            url: https://download.gnome.org/sources/vte/0.78/vte-0.78.0.tar.xz
+            sha256: 07f09c6228a8bb3c1599dd0f5a6ec797b30d3010c3ac91cf21b69d9635dfaf7c
             x-checker-data:
               type: gnome
               name: vte
