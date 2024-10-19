@@ -62,7 +62,6 @@ modules:
       - name: libgedit-gfls
         buildsystem: meson
         config-opts:
-          - -Dgobject_introspection=false
           - -Dgtk_doc=false
           - -Dtests=false
         sources:
@@ -78,7 +77,6 @@ modules:
       - name: libgedit-amtk
         buildsystem: meson
         config-opts:
-          - -Dgobject_introspection=false
           - -Dgtk_doc=false
           - -Dtests=false
         sources:
