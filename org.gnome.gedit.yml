@@ -152,8 +152,8 @@ modules:
           - -Ducd_path=/app/share/unicode
         sources:
           - type: archive
-            url: https://gitlab.gnome.org/GNOME/gucharmap/-/archive/15.1.5/gucharmap-15.1.5.tar.gz
-            sha256: ff0858e9e36c5ff70a5798b4d879d4ad576fdbf9225358c53ce5bbde31d67a08
+            url: https://gitlab.gnome.org/GNOME/gucharmap/-/archive/16.0.1/gucharmap-16.0.1.tar.gz
+            sha256: db55dd71dd3f8dd5f2fb08eb2ef61df37aecd884d7a3a37686967c0ab5d55b7f
             x-checker-data:
               type: anitya
               project-id: 1276
@@ -172,16 +172,16 @@ modules:
               - bsdtar -xf Unihan.zip -C ${FLATPAK_DEST}/share/unicode
             sources:
               - type: file
-                url: https://www.unicode.org/Public/zipped/15.1.0/UCD.zip
-                sha256: cb1c663d053926500cd501229736045752713a066bd75802098598b7a7056177
+                url: https://www.unicode.org/Public/zipped/16.0.0/UCD.zip
+                sha256: c86dd81f2b14a43b0cc064aa5f89aa7241386801e35c59c7984e579832634eb2
                 x-checker-data:
                   type: anitya
                   project-id: 17620
                   stable-only: true
                   url-template: https://www.unicode.org/Public/zipped/$version/UCD.zip
               - type: file
-                url: https://www.unicode.org/Public/zipped/15.1.0/Unihan.zip
-                sha256: a0226610e324bcf784ac380e11f4cbf533ee1e6b3d028b0991bf8c0dc3f85853
+                url: https://www.unicode.org/Public/zipped/16.0.0/Unihan.zip
+                sha256: b8f000df69de7828d21326a2ffea462b04bc7560022989f7cc704f10521ef3e0
                 x-checker-data:
                   type: anitya
                   project-id: 17620
@@ -196,8 +196,8 @@ modules:
           - /bin
         sources:
           - type: archive
-            url: https://download.gnome.org/sources/vte/0.77/vte-0.77.92.tar.xz
-            sha256: fc90138274afb3ddda3cdad12d9c59a3384206999df54eb0e2011f0eb07f6b0f
+            url: https://download.gnome.org/sources/vte/0.78/vte-0.78.0.tar.xz
+            sha256: 07f09c6228a8bb3c1599dd0f5a6ec797b30d3010c3ac91cf21b69d9635dfaf7c
             x-checker-data:
               type: gnome
               name: vte
