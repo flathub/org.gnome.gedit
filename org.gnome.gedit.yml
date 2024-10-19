@@ -173,38 +173,6 @@ modules:
             cleanup:
               - '*'
 
-      - name: libgit2-glib
-        buildsystem: meson
-        config-opts:
-          - -Dssh=false
-        sources:
-          - type: archive
-            url: https://download.gnome.org/sources/libgit2-glib/1.2/libgit2-glib-1.2.0.tar.xz
-            sha256: 1331dada838f4e1f591b26459d44126a325de762dc3cd26153a31afbdfe18190
-            x-checker-data:
-              type: gnome
-              name: libgit2-glib
-              stable-only: true
-
-        modules:
-          - name: libgit2
-            cleanup:
-              - /bin
-            buildsystem: cmake-ninja
-            config-opts:
-              - -DCMAKE_BUILD_TYPE=None
-              - -Wno-dev
-            sources:
-              - type: archive
-                url: https://github.com/libgit2/libgit2/archive/v1.7.2/libgit2-1.7.2.tar.gz
-                sha256: de384e29d7efc9330c6cdb126ebf88342b5025d920dcb7c645defad85195ea7f
-                x-checker-data:
-                  type: anitya
-                  project-id: 1627
-                  url-template: https://github.com/libgit2/libgit2/archive/v$version/libgit2-$version.tar.gz
-                  versions:
-                    <: '1.8'
-
       - name: vte
         buildsystem: meson
         cleanup:
