@@ -69,6 +69,11 @@ modules:
           - type: archive
             url: https://download.gnome.org/sources/libgedit-gfls/0.2/libgedit-gfls-0.2.0.tar.xz
             sha256: c88bc2bbf1ec1155b61766f372ac44a7f272792234b86e8ad5ea4f7365171acb
+            x-checker-data:
+              type: gnome
+              name: libgedit-gfls
+              versions:
+                <: '0.3'
 
       - name: libgedit-amtk
         buildsystem: meson
@@ -80,6 +85,10 @@ modules:
           - type: archive
             url: https://download.gnome.org/sources/libgedit-amtk/5.9/libgedit-amtk-5.9.0.tar.xz
             sha256: 7fc3348bef242e08967bdbb9a6698cf39f7810f95051fd8132910f36ed2d6d15
+            x-checker-data:
+              type: gnome
+              name: libgedit-amtk
+              stable-only: true
 
       - name: libpeas
         buildsystem: meson
@@ -106,6 +115,11 @@ modules:
           - type: archive
             url: https://download.gnome.org/sources/libgedit-gtksourceview/299/libgedit-gtksourceview-299.3.0.tar.xz
             sha256: 5ab049520010501e78ca4a19df96e2041412756ce90a3dde0a8a1ae6d88af052
+            x-checker-data:
+              type: gnome
+              name: libgedit-gtksourceview
+              versions:
+                <: '299.4'
 
       - name: libgedit-tepl
         buildsystem: meson
@@ -116,6 +130,11 @@ modules:
           - type: archive
             url: https://download.gnome.org/sources/libgedit-tepl/6.11/libgedit-tepl-6.11.0.tar.xz
             sha256: 30814663de8324acbbdce623ead4690ed75a9ff7c90023a04997d67e2c0121aa
+            x-checker-data:
+              type: gnome
+              name: libgedit-tepl
+              versions:
+                <: '6.12'
 
   - name: gedit-plugins
     buildsystem: meson
