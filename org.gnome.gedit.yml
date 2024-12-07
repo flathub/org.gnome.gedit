@@ -66,8 +66,8 @@ modules:
           - -Dtests=false
         sources:
           - type: archive
-            url: https://download.gnome.org/sources/libgedit-gfls/0.2/libgedit-gfls-0.2.0.tar.xz
-            sha256: c88bc2bbf1ec1155b61766f372ac44a7f272792234b86e8ad5ea4f7365171acb
+            url: https://download.gnome.org/sources/libgedit-gfls/0.2/libgedit-gfls-0.2.1.tar.xz
+            sha256: b3c8e07facb4d0c444648a934ff5236d22b74154556235b90aa7828ba4816e1d
             x-checker-data:
               type: gnome
               name: libgedit-gfls
