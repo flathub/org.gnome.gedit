@@ -109,14 +109,13 @@ modules:
           - -Dgtk_doc=false
           - -Dtests=false
         sources:
-          - type: archive
-            url: https://download.gnome.org/sources/libgedit-gtksourceview/299/libgedit-gtksourceview-299.4.0.tar.xz
-            sha256: 20c17ff89e2031aed5dc1107fe9a93fd50f92b569be2954b119c86f9e2fd85d6
+          - type: git
+            url: https://gitlab.gnome.org/World/gedit/libgedit-gtksourceview.git
+            tag: 299.5.0
+            commit: c1a8d726c326d493462498fd6b94dc4e959a817c
             x-checker-data:
-              type: gnome
-              name: libgedit-gtksourceview
-              versions:
-                <: '299.5'
+              type: git
+              tag-pattern: ^299\.5\.\d+$
 
       - name: libgedit-tepl
         buildsystem: meson
