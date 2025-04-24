@@ -65,14 +65,13 @@ modules:
           - -Dgtk_doc=false
           - -Dtests=false
         sources:
-          - type: archive
-            url: https://download.gnome.org/sources/libgedit-gfls/0.2/libgedit-gfls-0.2.1.tar.xz
-            sha256: b3c8e07facb4d0c444648a934ff5236d22b74154556235b90aa7828ba4816e1d
+          - type: git
+            url: https://gitlab.gnome.org/World/gedit/libgedit-gfls.git
+            tag: 0.3.0
+            commit: c914a1d295c94fd07ef5e7352dda30b9535c04d0
             x-checker-data:
-              type: gnome
-              name: libgedit-gfls
-              versions:
-                <: '0.3'
+              type: git
+              tag-pattern: ^0\.3\.\d+$
 
       - name: libgedit-amtk
         buildsystem: meson
