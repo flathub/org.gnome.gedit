@@ -79,13 +79,13 @@ modules:
           - -Dgtk_doc=false
           - -Dtests=false
         sources:
-          - type: archive
-            url: https://download.gnome.org/sources/libgedit-amtk/5.9/libgedit-amtk-5.9.0.tar.xz
-            sha256: 7fc3348bef242e08967bdbb9a6698cf39f7810f95051fd8132910f36ed2d6d15
+          - type: git
+            url: https://gitlab.gnome.org/World/gedit/libgedit-amtk.git
+            tag: 5.9.1
+            commit: f483c4fbf3d3747d1838df9009bf2f75aa6566ab
             x-checker-data:
-              type: gnome
-              name: libgedit-amtk
-              stable-only: true
+              type: git
+              tag-pattern: ^5\.9\.\d+$
 
       - name: libpeas
         buildsystem: meson
