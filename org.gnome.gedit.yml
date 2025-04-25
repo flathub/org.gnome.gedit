@@ -134,6 +134,8 @@ modules:
 
   - name: gedit-plugins
     buildsystem: meson
+    config-opts:
+      - -Dplugin_charmap=false
     sources:
       - type: archive
         url: https://download.gnome.org/sources/gedit-plugins/48/gedit-plugins-48.1.tar.xz
@@ -144,50 +146,6 @@ modules:
           stable-only: true
 
     modules:
-      - name: gucharmap
-        buildsystem: meson
-        config-opts:
-          - -Ducd_path=/app/share/unicode
-        sources:
-          - type: archive
-            url: https://gitlab.gnome.org/GNOME/gucharmap/-/archive/16.0.2/gucharmap-16.0.2.tar.gz
-            sha256: 200b0dd3276290e2d442f7ce71b9ca5dd79a0b07099f3e6b02d9b493e08ba303
-            x-checker-data:
-              type: anitya
-              project-id: 1276
-              stable-only: true
-              url-template: https://gitlab.gnome.org/GNOME/gucharmap/-/archive/$version/gucharmap-$version.tar.gz
-        cleanup:
-          - /bin
-          - /share/help
-          - /share/metainfo
-        modules:
-          - name: unicode-character-database
-            buildsystem: simple
-            build-commands:
-              - install -Dm644 {UCD,Unihan}.zip -t ${FLATPAK_DEST}/share/unicode/
-              - bsdtar -xf UCD.zip -C ${FLATPAK_DEST}/share/unicode
-              - bsdtar -xf Unihan.zip -C ${FLATPAK_DEST}/share/unicode
-            sources:
-              - type: file
-                url: https://www.unicode.org/Public/zipped/16.0.0/UCD.zip
-                sha256: c86dd81f2b14a43b0cc064aa5f89aa7241386801e35c59c7984e579832634eb2
-                x-checker-data:
-                  type: anitya
-                  project-id: 17620
-                  stable-only: true
-                  url-template: https://www.unicode.org/Public/zipped/$version/UCD.zip
-              - type: file
-                url: https://www.unicode.org/Public/zipped/16.0.0/Unihan.zip
-                sha256: b8f000df69de7828d21326a2ffea462b04bc7560022989f7cc704f10521ef3e0
-                x-checker-data:
-                  type: anitya
-                  project-id: 17620
-                  stable-only: true
-                  url-template: https://www.unicode.org/Public/zipped/$version/Unihan.zip
-            cleanup:
-              - '*'
-
       - name: vte
         buildsystem: meson
         cleanup:
