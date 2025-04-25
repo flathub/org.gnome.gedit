@@ -158,3 +158,12 @@ modules:
               type: gnome
               name: vte
               stable-only: true
+
+        modules:
+          - name: fast_float
+            buildsystem: cmake-ninja
+            sources:
+              - type: git
+                url: https://github.com/fastfloat/fast_float.git
+                tag: v8.0.2
+                commit: 50a80a73ab2ab256ba1c3bf86923ddd8b4202bc7
