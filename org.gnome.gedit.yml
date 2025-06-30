@@ -169,6 +169,7 @@ modules:
               type: gnome
               name: vte
               stable-only: true
+              version-scheme: odd-minor-is-unstable
 
         modules:
           - name: fast_float
