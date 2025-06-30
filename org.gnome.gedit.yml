@@ -168,8 +168,8 @@ modules:
             x-checker-data:
               type: gnome
               name: vte
-              stable-only: true
-              version-scheme: odd-minor-is-unstable
+              versions:
+                <: '0.81'
 
         modules:
           - name: fast_float
