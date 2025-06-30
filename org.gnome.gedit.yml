@@ -163,8 +163,8 @@ modules:
           - /bin
         sources:
           - type: archive
-            url: https://download.gnome.org/sources/vte/0.80/vte-0.80.2.tar.xz
-            sha256: b225bebd043633bd491f2ea171374d0f3f9de62dfec07653053bc08c4face46f
+            url: https://download.gnome.org/sources/vte/0.80/vte-0.80.3.tar.xz
+            sha256: 2e596fd3fbeabb71531662224e71f6a2c37f684426136d62854627276ef4f699
             x-checker-data:
               type: gnome
               name: vte
