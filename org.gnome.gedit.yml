@@ -62,13 +62,13 @@ modules:
           - -Dtests=false
           - -Dinstall_tests=false
         sources:
-          - type: archive
-            url: https://download.gnome.org/sources/gspell/1.14/gspell-1.14.0.tar.xz
-            sha256: 64ea1d8e9edc1c25b45a920e80daf67559d1866ffcd7f8432fecfea6d0fe8897
+          - type: git
+            url: https://gitlab.gnome.org/GNOME/gspell.git
+            tag: 1.14.1
+            commit: 666001c0a0edcb8560b32765c06bd5d16b5ef52a
             x-checker-data:
-              type: gnome
-              name: gspell
-              stable-only: true
+              type: git
+              tag-pattern: ^1\.\d+\.\d+$
 
       - name: libgedit-gfls
         buildsystem: meson
