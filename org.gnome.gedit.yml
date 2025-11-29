@@ -45,8 +45,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.gnome.org/World/gedit/gedit.git
-        tag: 48.1.1
-        commit: 868cfd80b16d699421dfe8910a3b1ee9ddba4280
+        tag: 48.1.2
+        commit: 7ab316755060b4aba38a662afb7b54082e52d0be
         x-checker-data:
           type: git
           tag-pattern: ^48\.1\.\d+$
@@ -64,8 +64,8 @@ modules:
         sources:
           - type: git
             url: https://gitlab.gnome.org/GNOME/gspell.git
-            tag: 1.14.1
-            commit: 666001c0a0edcb8560b32765c06bd5d16b5ef52a
+            tag: 1.14.2
+            commit: 2497b987e8d013947012c1b00ac806aefb909d1c
             x-checker-data:
               type: git
               tag-pattern: ^1\.\d+\.\d+$
@@ -78,8 +78,8 @@ modules:
         sources:
           - type: git
             url: https://gitlab.gnome.org/World/gedit/libgedit-gfls.git
-            tag: 0.3.0
-            commit: c914a1d295c94fd07ef5e7352dda30b9535c04d0
+            tag: 0.3.1
+            commit: 0a0c8dd29ae2f9f4a99cbaaf1628d2352953e0bc
             x-checker-data:
               type: git
               tag-pattern: ^0\.3\.\d+$
@@ -92,8 +92,8 @@ modules:
         sources:
           - type: git
             url: https://gitlab.gnome.org/World/gedit/libgedit-amtk.git
-            tag: 5.9.1
-            commit: f483c4fbf3d3747d1838df9009bf2f75aa6566ab
+            tag: 5.9.2
+            commit: 117f27534d74c164f7f5d0d034189688720d6630
             x-checker-data:
               type: git
               tag-pattern: ^5\.9\.\d+$
@@ -177,5 +177,5 @@ modules:
             sources:
               - type: git
                 url: https://github.com/fastfloat/fast_float.git
-                tag: v8.0.2
-                commit: 50a80a73ab2ab256ba1c3bf86923ddd8b4202bc7
+                tag: v8.1.0
+                commit: 88b1e5321c6918cbe091afd76728296290668403
