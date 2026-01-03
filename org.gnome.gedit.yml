@@ -29,27 +29,16 @@ cleanup:
   - '*.a'
 
 modules:
-  # Bundle an older version of pygobject. The latest version makes gedit to freeze.
-  # https://gitlab.gnome.org/World/gedit/gedit/-/issues/614
-  - name: pygobject
-    buildsystem: meson
-    config-opts:
-      - -Dtests=false
-    sources:
-      - type: archive
-        url: https://download.gnome.org/sources/pygobject/3.50/pygobject-3.50.0.tar.xz
-        sha256: 8d836e75b5a881d457ee1622cae4a32bcdba28a0ba562193adb3bbb472472212
-
   - name: gedit
     buildsystem: meson
     sources:
       - type: git
         url: https://gitlab.gnome.org/World/gedit/gedit.git
-        tag: 48.1.2
-        commit: 7ab316755060b4aba38a662afb7b54082e52d0be
+        tag: 49.0
+        commit: 684abd8299139e1a3b87446da501ad034e78c840
         x-checker-data:
           type: git
-          tag-pattern: ^48\.1\.\d+$
+          tag-pattern: ^49\.\d+$
 
     modules:
       - name: gspell
@@ -102,6 +91,7 @@ modules:
         buildsystem: meson
         config-opts:
           - -Dlua51=false
+          - -Dpython3=false
           - -Ddemos=false
           - -Dglade_catalog=false
         sources:
@@ -122,11 +112,11 @@ modules:
         sources:
           - type: git
             url: https://gitlab.gnome.org/World/gedit/libgedit-gtksourceview.git
-            tag: 299.5.0
-            commit: c1a8d726c326d493462498fd6b94dc4e959a817c
+            tag: 299.6.0
+            commit: a7bdc39f9fbc10c49ea7468ac1e5bf77385da0c0
             x-checker-data:
               type: git
-              tag-pattern: ^299\.5\.\d+$
+              tag-pattern: ^299\.6\.\d+$
 
       - name: libgedit-tepl
         buildsystem: meson
@@ -134,48 +124,21 @@ modules:
           - -Dgtk_doc=false
           - -Dtests=false
         sources:
-          - type: archive
-            url: https://download.gnome.org/sources/libgedit-tepl/6.12/libgedit-tepl-6.12.0.tar.xz
-            sha256: 90874d755051199e25823623ff2772027f8664a39746fb82d0f8d44f12d2a3f2
+          - type: git
+            url: https://gitlab.gnome.org/World/gedit/libgedit-tepl.git
+            tag: 6.14.0
+            commit: d60f7ded17b52ea42091c073ea81090e91f38620
             x-checker-data:
-              type: gnome
-              name: libgedit-tepl
-              versions:
-                <: '6.13'
+              type: git
+              tag-pattern: ^6\.14\.\d+$
 
   - name: gedit-plugins
     buildsystem: meson
-    config-opts:
-      - -Dplugin_charmap=false
     sources:
-      - type: archive
-        url: https://download.gnome.org/sources/gedit-plugins/48/gedit-plugins-48.1.tar.xz
-        sha256: 9026bfe71a678f8c47f46316837437e7b357918fd6c3d4d65be27fc95b710e1c
+      - type: git
+        url: https://gitlab.gnome.org/World/gedit/gedit-plugins.git
+        tag: 49.0
+        commit: 3a4b4d7f11dc811ce2b4e810a23d589f6928b7c6
         x-checker-data:
-          type: gnome
-          name: gedit-plugins
-          stable-only: true
-
-    modules:
-      - name: vte
-        buildsystem: meson
-        cleanup:
-          - /bin
-        sources:
-          - type: archive
-            url: https://download.gnome.org/sources/vte/0.82/vte-0.82.2.tar.xz
-            sha256: e1295aafc4682b3b550f1235dc2679baa0f71570d8ed543c001c1283d530be91
-            x-checker-data:
-              type: gnome
-              name: vte
-              stable-only: true
-              version-scheme: odd-minor-is-unstable
-
-        modules:
-          - name: fast_float
-            buildsystem: cmake-ninja
-            sources:
-              - type: git
-                url: https://github.com/fastfloat/fast_float.git
-                tag: v8.1.0
-                commit: 88b1e5321c6918cbe091afd76728296290668403
+          type: git
+          tag-pattern: ^49\.\d+$
