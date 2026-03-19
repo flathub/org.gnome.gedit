@@ -34,7 +34,7 @@ modules:
     sources:
       - type: git
         url: https://gitlab.gnome.org/World/gedit/gedit.git
-        tag: 49.0
+        tag: '49.0'
         commit: 684abd8299139e1a3b87446da501ad034e78c840
         x-checker-data:
           type: git
@@ -137,7 +137,7 @@ modules:
     sources:
       - type: git
         url: https://gitlab.gnome.org/World/gedit/gedit-plugins.git
-        tag: 49.0
+        tag: '49.0'
         commit: 3a4b4d7f11dc811ce2b4e810a23d589f6928b7c6
         x-checker-data:
           type: git
