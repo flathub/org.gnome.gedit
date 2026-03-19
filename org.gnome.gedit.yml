@@ -53,8 +53,8 @@ modules:
         sources:
           - type: git
             url: https://gitlab.gnome.org/GNOME/gspell.git
-            tag: 1.14.2
-            commit: 2497b987e8d013947012c1b00ac806aefb909d1c
+            tag: 1.14.3
+            commit: 4781a91e2fa81f56f47b206cc1755d4053dc4d06
             x-checker-data:
               type: git
               tag-pattern: ^1\.\d+\.\d+$
@@ -96,12 +96,12 @@ modules:
           - -Dglade_catalog=false
         sources:
           - type: archive
-            url: https://download.gnome.org/sources/libpeas/1.36/libpeas-1.36.0.tar.xz
-            sha256: 297cb9c2cccd8e8617623d1a3e8415b4530b8e5a893e3527bbfd1edd13237b4c
+            url: https://download.gnome.org/sources/libpeas/1.38/libpeas-1.38.1.tar.xz
+            sha256: e82fd328adcac1aba34b64136bdfcbbacf2b3258a8bc4e5f480a72502a611ae9
             x-checker-data:
               type: gnome
               versions:
-                <: '1.37'
+                <: '1.39'
               name: libpeas
 
       - name: libgedit-gtksourceview
