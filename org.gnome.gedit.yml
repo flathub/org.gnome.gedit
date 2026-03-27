@@ -34,11 +34,11 @@ modules:
     sources:
       - type: git
         url: https://gitlab.gnome.org/World/gedit/gedit.git
-        tag: '49.0'
-        commit: 684abd8299139e1a3b87446da501ad034e78c840
+        tag: '50.0'
+        commit: 25d0bf0c3c40b0866fc23ec875f0af6c67f728ef
         x-checker-data:
           type: git
-          tag-pattern: ^49\.\d+$
+          tag-pattern: ^50\.\d+$
 
     modules:
       - name: gspell
@@ -67,11 +67,11 @@ modules:
         sources:
           - type: git
             url: https://gitlab.gnome.org/World/gedit/libgedit-gfls.git
-            tag: 0.3.1
-            commit: 0a0c8dd29ae2f9f4a99cbaaf1628d2352953e0bc
+            tag: 0.4.0
+            commit: b292896adfb1c371aa8db0819f4754ff3bf4a848
             x-checker-data:
               type: git
-              tag-pattern: ^0\.3\.\d+$
+              tag-pattern: ^0\.4\.\d+$
 
       - name: libgedit-amtk
         buildsystem: meson
@@ -81,11 +81,11 @@ modules:
         sources:
           - type: git
             url: https://gitlab.gnome.org/World/gedit/libgedit-amtk.git
-            tag: 5.9.2
-            commit: 117f27534d74c164f7f5d0d034189688720d6630
+            tag: 5.10.0
+            commit: 8420fb89b340e33576a50f3ee2d69df417b16e5a
             x-checker-data:
               type: git
-              tag-pattern: ^5\.9\.\d+$
+              tag-pattern: ^5\.10\.\d+$
 
       - name: libpeas
         buildsystem: meson
@@ -112,11 +112,11 @@ modules:
         sources:
           - type: git
             url: https://gitlab.gnome.org/World/gedit/libgedit-gtksourceview.git
-            tag: 299.6.0
-            commit: a7bdc39f9fbc10c49ea7468ac1e5bf77385da0c0
+            tag: 299.7.0
+            commit: 9fb56b0afed2d03fb9b166c9273530321e044377
             x-checker-data:
               type: git
-              tag-pattern: ^299\.6\.\d+$
+              tag-pattern: ^299\.7\.\d+$
 
       - name: libgedit-tepl
         buildsystem: meson
@@ -137,8 +137,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.gnome.org/World/gedit/gedit-plugins.git
-        tag: '49.0'
-        commit: 3a4b4d7f11dc811ce2b4e810a23d589f6928b7c6
+        tag: '50.0'
+        commit: dc159e901271fcb300da0d5691b14f2433f82461
         x-checker-data:
           type: git
-          tag-pattern: ^49\.\d+$
+          tag-pattern: ^50\.\d+$
