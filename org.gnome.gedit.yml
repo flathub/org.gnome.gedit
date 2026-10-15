@@ -34,11 +34,11 @@ modules:
     sources:
       - type: git
         url: https://gitlab.gnome.org/World/gedit/gedit.git
-        tag: '50.0'
-        commit: 25d0bf0c3c40b0866fc23ec875f0af6c67f728ef
+        tag: '51.0'
+        commit: b7651f36c9337d20694ae6fe41f0fbe33a043f41
         x-checker-data:
           type: git
-          tag-pattern: ^50\.\d+$
+          tag-pattern: ^51\.\d+$
 
     modules:
       - name: libhandy
@@ -83,11 +83,11 @@ modules:
         sources:
           - type: git
             url: https://gitlab.gnome.org/World/gedit/libgedit-gfls.git
-            tag: 0.4.2
-            commit: 3e83903b8211b7b392758e548e2d33ab162a32c5
+            tag: 0.5.0
+            commit: 8ff9380b1796aa141c07f335ac10a405f39f988f
             x-checker-data:
               type: git
-              tag-pattern: ^0\.4\.\d+$
+              tag-pattern: ^0\.5\.\d+$
 
       - name: libgedit-amtk
         buildsystem: meson
@@ -97,11 +97,11 @@ modules:
         sources:
           - type: git
             url: https://gitlab.gnome.org/World/gedit/libgedit-amtk.git
-            tag: 5.10.0
-            commit: 8420fb89b340e33576a50f3ee2d69df417b16e5a
+            tag: 5.11.0
+            commit: fcd22592dbe2589df622c31cf8fe823470ad28b5
             x-checker-data:
               type: git
-              tag-pattern: ^5\.10\.\d+$
+              tag-pattern: ^5\.11\.\d+$
 
       - name: libpeas
         buildsystem: meson
@@ -128,11 +128,11 @@ modules:
         sources:
           - type: git
             url: https://gitlab.gnome.org/World/gedit/libgedit-gtksourceview.git
-            tag: 299.7.1
-            commit: b2e0760fcd22485b3df2846e8f1562f69a31ce2d
+            tag: 299.8.0
+            commit: 80d2f107f915576f43a019abe26f13a9db21703c
             x-checker-data:
               type: git
-              tag-pattern: ^299\.7\.\d+$
+              tag-pattern: ^299\.8\.\d+$
 
       - name: libgedit-tepl
         buildsystem: meson
@@ -142,19 +142,8 @@ modules:
         sources:
           - type: git
             url: https://gitlab.gnome.org/World/gedit/libgedit-tepl.git
-            tag: 6.14.0
-            commit: d60f7ded17b52ea42091c073ea81090e91f38620
+            tag: 6.15.0
+            commit: 621fa9e8c43fafca8a0f299ac116715b3a835fbe
             x-checker-data:
               type: git
-              tag-pattern: ^6\.14\.\d+$
-
-  - name: gedit-plugins
-    buildsystem: meson
-    sources:
-      - type: git
-        url: https://gitlab.gnome.org/World/gedit/gedit-plugins.git
-        tag: '50.0'
-        commit: dc159e901271fcb300da0d5691b14f2433f82461
-        x-checker-data:
-          type: git
-          tag-pattern: ^50\.\d+$
+              tag-pattern: ^6\.15\.\d+$
