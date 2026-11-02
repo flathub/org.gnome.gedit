@@ -73,7 +73,7 @@ modules:
             commit: 7bcc272d6cf469cb7aa0c7c35cea6b686077b9a2
             x-checker-data:
               type: git
-              tag-pattern: ^1\.\d+\.\d+$
+              tag-pattern: '^(1\.\d+\.\d+)$'
 
       - name: libgedit-gfls
         buildsystem: meson
