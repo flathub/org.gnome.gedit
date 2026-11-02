@@ -87,7 +87,7 @@ modules:
             commit: 8ff9380b1796aa141c07f335ac10a405f39f988f
             x-checker-data:
               type: git
-              tag-pattern: ^0\.5\.\d+$
+              tag-pattern: '^(0\.5\.\d+)$'
 
       - name: libgedit-amtk
         buildsystem: meson
@@ -101,7 +101,7 @@ modules:
             commit: fcd22592dbe2589df622c31cf8fe823470ad28b5
             x-checker-data:
               type: git
-              tag-pattern: ^5\.11\.\d+$
+              tag-pattern: '^(5\.11\.\d+)$'
 
       - name: libpeas
         buildsystem: meson
@@ -132,7 +132,7 @@ modules:
             commit: 80d2f107f915576f43a019abe26f13a9db21703c
             x-checker-data:
               type: git
-              tag-pattern: ^299\.8\.\d+$
+              tag-pattern: '^(299\.8\.\d+)$'
 
       - name: libgedit-tepl
         buildsystem: meson
@@ -146,4 +146,4 @@ modules:
             commit: 621fa9e8c43fafca8a0f299ac116715b3a835fbe
             x-checker-data:
               type: git
-              tag-pattern: ^6\.15\.\d+$
+              tag-pattern: '^(6\.15\.\d+)$'
