@@ -34,8 +34,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.gnome.org/World/gedit/gedit.git
-        tag: '51.0'
-        commit: b7651f36c9337d20694ae6fe41f0fbe33a043f41
+        tag: '51.1'
+        commit: 76b8d9ad35c1daf402d2aae04d1b16e7455fc091
         x-checker-data:
           type: git
           tag-pattern: ^(51\.\d+)$
@@ -69,8 +69,8 @@ modules:
         sources:
           - type: git
             url: https://gitlab.gnome.org/GNOME/gspell.git
-            tag: 1.14.5
-            commit: 7bcc272d6cf469cb7aa0c7c35cea6b686077b9a2
+            tag: 1.14.6
+            commit: d4c6cfdbb201d991e7121be75523e1b706cf0b3c
             x-checker-data:
               type: git
               tag-pattern: '^(1\.\d+\.\d+)$'
@@ -83,8 +83,8 @@ modules:
         sources:
           - type: git
             url: https://gitlab.gnome.org/World/gedit/libgedit-gfls.git
-            tag: 0.5.0
-            commit: 8ff9380b1796aa141c07f335ac10a405f39f988f
+            tag: 0.5.1
+            commit: 67eeb41199e52e00a8308d556d52c3541de2504e
             x-checker-data:
               type: git
               tag-pattern: '^(0\.5\.\d+)$'
